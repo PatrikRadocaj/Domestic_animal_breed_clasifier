@@ -1,0 +1,25 @@
+name: yolo11_breed
+task: detect
+base_model: yolo11s.pt
+imgsz: 640
+classes: breed
+data_yaml_path: data/processed/yolo_breed.yaml
+
+train:
+  epochs: 150
+  batch: 16
+  workers: 8
+  patience: 30
+  optimizer: auto
+  lr0: 0.01
+  cos_lr: true
+  close_mosaic: 10
+  amp: true
+  cache: false
+
+export:
+  formats:
+    - onnx
+  dynamic: true
+  simplify: true
+

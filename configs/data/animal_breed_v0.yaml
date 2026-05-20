@@ -1,0 +1,39 @@
+name: animal_breed_v0
+taxonomy_path: data/label_maps/taxonomy_v0.yaml
+manifest_path: data/manifests/manifest_v0.csv
+manifest_parquet_path: data/manifests/manifest_v0.parquet
+split_manifest_path: data/manifests/manifest_v0_splits.csv
+prepared_yolo_species_dir: data/processed/yolo_species
+prepared_yolo_breed_dir: data/processed/yolo_breed
+
+raw_image_roots:
+  - data/raw
+
+annotation_files: []
+source_name: local_tree
+default_license: unknown
+
+image_extensions:
+  - .jpg
+  - .jpeg
+  - .png
+  - .webp
+
+directory_layout:
+  # Expected relative layout for raw tree ingestion:
+  # root/species_id/breed_slug/image.ext
+  species_level: 0
+  breed_level: 1
+
+validation:
+  require_existing_files: true
+  require_taxonomy_match: true
+  allow_unknown_breed: false
+
+splitting:
+  train_size: 0.8
+  val_size: 0.1
+  test_size: 0.1
+  stratify_by: breed_id
+  group_by: duplicate_cluster
+  min_count_for_stratify: 2

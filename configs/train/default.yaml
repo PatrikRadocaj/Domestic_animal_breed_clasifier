@@ -1,0 +1,16 @@
+seed: ${seed}
+deterministic: false
+device: auto
+precision: amp
+resume: false
+checkpoint_dir: experiments/checkpoints
+
+tracking:
+  backend: wandb
+  enabled: true
+  entity: null
+  project: ${project_name}
+  tags:
+    - milestone1
+  log_artifacts: true
+

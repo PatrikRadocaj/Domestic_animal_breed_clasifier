@@ -1,0 +1,21 @@
+name: convnextv2_tiny
+architecture: convnextv2_tiny.fcmae_ft_in22k_in1k
+num_classes: null
+pretrained: true
+img_size: 384
+crop_mode: detector_crop
+species_conditioned: true
+
+train:
+  epochs: 50
+  batch_size: 64
+  num_workers: 8
+  optimizer: adamw
+  lr: 0.0002
+  weight_decay: 0.05
+  scheduler: cosine
+  label_smoothing: 0.1
+  mixup_alpha: 0.2
+  cutmix_alpha: 1.0
+  amp: true
+

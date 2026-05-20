@@ -1,0 +1,16 @@
+batch_size: 64
+num_workers: 8
+topk:
+  - 1
+  - 5
+iou_thresholds:
+  - 0.5
+  - 0.75
+latency:
+  warmup_iters: 25
+  benchmark_iters: 100
+  batch_sizes:
+    - 1
+    - 8
+    - 16
+

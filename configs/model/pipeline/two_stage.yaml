@@ -1,0 +1,8 @@
+name: two_stage_yolo11_classifier
+detector_conf_threshold: 0.25
+detector_iou_threshold: 0.7
+crop_context_ratio: 0.12
+crop_square_pad: true
+max_detections: 20
+classifier_batch_size: 64
+

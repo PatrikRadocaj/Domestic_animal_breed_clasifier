@@ -1,0 +1,23 @@
+defaults:
+  - data: animal_breed_v0
+  - model/detector: yolo11_species
+  - model/classifier: efficientnetv2_s
+  - train: default
+  - eval: default
+  - experiment: local
+  - _self_
+
+project_name: animal-breed-detection
+seed: 42
+output_dir: ${hydra:runtime.output_dir}
+
+paths:
+  repo_root: ${oc.env:PWD,.}
+  results_dir: results
+  experiments_dir: experiments
+
+logging:
+  level: INFO
+  log_config: true
+  log_git: true
+

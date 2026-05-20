@@ -1,0 +1,157 @@
+version: taxonomy_v0
+description: >
+  Initial domestic-animal hierarchy. This file is the source of truth for
+  species identifiers, breed identifiers, aliases, and species-to-breed mapping.
+unknown_policy:
+  species_id: unknown_species
+  breed_id: unknown_breed
+  allow_unknown_breed_for_training: false
+
+species:
+  - id: dog
+    name: Dog
+    aliases: [canine, domestic_dog]
+  - id: cat
+    name: Cat
+    aliases: [feline, domestic_cat]
+  - id: cattle
+    name: Cattle
+    aliases: [cow, bull, calf, bovine]
+  - id: horse
+    name: Horse
+    aliases: [equine]
+  - id: sheep
+    name: Sheep
+    aliases: [ovine]
+  - id: goat
+    name: Goat
+    aliases: [caprine]
+  - id: pig
+    name: Pig
+    aliases: [swine]
+  - id: rabbit
+    name: Rabbit
+    aliases: [domestic_rabbit]
+  - id: chicken
+    name: Chicken
+    aliases: [hen, rooster]
+
+breeds:
+  dog:
+    - id: dog:affenpinscher
+      name: Affenpinscher
+      aliases: [affenpinscher]
+    - id: dog:beagle
+      name: Beagle
+      aliases: [beagle]
+    - id: dog:boxer
+      name: Boxer
+      aliases: [boxer]
+    - id: dog:chihuahua
+      name: Chihuahua
+      aliases: [chihuahua]
+    - id: dog:german_shepherd
+      name: German Shepherd
+      aliases: [german_shepherd, german_shepherd_dog, alsatian]
+    - id: dog:golden_retriever
+      name: Golden Retriever
+      aliases: [golden_retriever]
+    - id: dog:labrador_retriever
+      name: Labrador Retriever
+      aliases: [labrador_retriever, labrador, lab]
+    - id: dog:poodle
+      name: Poodle
+      aliases: [poodle, standard_poodle, miniature_poodle, toy_poodle]
+  cat:
+    - id: cat:abyssinian
+      name: Abyssinian
+      aliases: [abyssinian]
+    - id: cat:bengal
+      name: Bengal
+      aliases: [bengal]
+    - id: cat:birman
+      name: Birman
+      aliases: [birman]
+    - id: cat:maine_coon
+      name: Maine Coon
+      aliases: [maine_coon]
+    - id: cat:persian
+      name: Persian
+      aliases: [persian]
+    - id: cat:ragdoll
+      name: Ragdoll
+      aliases: [ragdoll]
+    - id: cat:siamese
+      name: Siamese
+      aliases: [siamese]
+    - id: cat:sphynx
+      name: Sphynx
+      aliases: [sphynx]
+  cattle:
+    - id: cattle:angus
+      name: Angus
+      aliases: [angus, aberdeen_angus]
+    - id: cattle:brahman
+      name: Brahman
+      aliases: [brahman]
+    - id: cattle:hereford
+      name: Hereford
+      aliases: [hereford]
+    - id: cattle:holstein_friesian
+      name: Holstein Friesian
+      aliases: [holstein, friesian, holstein_friesian]
+  horse:
+    - id: horse:arabian
+      name: Arabian
+      aliases: [arabian, arabian_horse]
+    - id: horse:friesian
+      name: Friesian
+      aliases: [friesian_horse, friesian]
+    - id: horse:quarter_horse
+      name: Quarter Horse
+      aliases: [quarter_horse]
+    - id: horse:thoroughbred
+      name: Thoroughbred
+      aliases: [thoroughbred]
+  sheep:
+    - id: sheep:dorper
+      name: Dorper
+      aliases: [dorper]
+    - id: sheep:merino
+      name: Merino
+      aliases: [merino]
+    - id: sheep:suffolk
+      name: Suffolk
+      aliases: [suffolk]
+  goat:
+    - id: goat:alpine
+      name: Alpine
+      aliases: [alpine]
+    - id: goat:boer
+      name: Boer
+      aliases: [boer]
+    - id: goat:saanen
+      name: Saanen
+      aliases: [saanen]
+  pig:
+    - id: pig:duroc
+      name: Duroc
+      aliases: [duroc]
+    - id: pig:large_white
+      name: Large White
+      aliases: [large_white, yorkshire]
+  rabbit:
+    - id: rabbit:holland_lop
+      name: Holland Lop
+      aliases: [holland_lop]
+    - id: rabbit:netherland_dwarf
+      name: Netherland Dwarf
+      aliases: [netherland_dwarf]
+  chicken:
+    - id: chicken:leghorn
+      name: Leghorn
+      aliases: [leghorn]
+    - id: chicken:rhode_island_red
+      name: Rhode Island Red
+      aliases: [rhode_island_red]
+
