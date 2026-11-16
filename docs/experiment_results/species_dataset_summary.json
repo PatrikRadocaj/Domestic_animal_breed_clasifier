@@ -1,0 +1,63 @@
+{
+  "created_utc": "2026-07-05T22-55-30Z",
+  "class_names": [
+    "alpaca",
+    "bactrian_camel",
+    "cat",
+    "cattle",
+    "chicken",
+    "dog",
+    "donkey",
+    "dromedary",
+    "duck",
+    "goat",
+    "goose",
+    "horse",
+    "llama",
+    "peafowl",
+    "pig",
+    "pigeon",
+    "rabbit",
+    "sheep",
+    "turkey"
+  ],
+  "nc": 19,
+  "counts": {
+    "train_records": 32398,
+    "val_records": 4532,
+    "test_records": 2685,
+    "train_plans": 16190,
+    "val_plans": 4532,
+    "test_plans": 2685,
+    "train_plan_mix": {
+      "augmented_single": 3238,
+      "real": 6476,
+      "synthetic_main": 6476
+    },
+    "pure_train_records_by_species": {
+      "alpaca": 625,
+      "bactrian_camel": 545,
+      "cat": 6476,
+      "cattle": 696,
+      "chicken": 3311,
+      "dog": 4185,
+      "donkey": 943,
+      "dromedary": 917,
+      "duck": 465,
+      "goat": 3438,
+      "goose": 395,
+      "horse": 552,
+      "llama": 347,
+      "peafowl": 1372,
+      "pig": 4443,
+      "pigeon": 835,
+      "rabbit": 924,
+      "sheep": 1069,
+      "turkey": 765
+    },
+    "excluded_species_without_pure_train_images": [
+      "camel",
+      "water_buffalo"
+    ]
+  }
+}

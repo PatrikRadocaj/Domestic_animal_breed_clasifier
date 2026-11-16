@@ -81,7 +81,7 @@ class Taxonomy:
         return parsed
 
     def _build_species_to_breeds(self) -> dict[str, list[str]]:
-        mapping = {species_id: [] for species_id in self.species}
+        mapping: dict[str, list[str]] = {species_id: [] for species_id in self.species}
         for breed in self.breeds.values():
             mapping.setdefault(breed.species_id, []).append(breed.id)
         return {k: sorted(v) for k, v in mapping.items()}

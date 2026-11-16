@@ -1,0 +1,76 @@
+dataset_id,source_type,source_ref,species_level,breed_level,expected_format,species_value,license,notes
+horse-breeds-olgabelitskaya,kaggle,olgabelitskaya/horse-breeds,yes,yes,folder_classification,horse,unknown,Horse breed classification dataset
+cattle-breeds-anandkumarsahu09,kaggle,anandkumarsahu09/cattle-breeds-dataset,yes,yes,folder_classification,cattle,cc0-1.0,Cattle breed classification dataset
+bangladeshi-cow-breeds-yd84s35d73,mendeley,yd84s35d73/1,yes,yes,folder_classification,cattle,cc-by-4.0,Bangladeshi cow breed identification dataset
+cow-breed-classification-zaidworks0508,kaggle,zaidworks0508/cow-breed-classification-dataset,yes,yes,folder_classification,cattle,unknown,Cow breed classification dataset
+indian-cattle-image-atharvadarpude,kaggle,atharvadarpude/indian-cattle-image-dataset,yes,yes,folder_classification,cattle,unknown,Indian cattle image dataset
+sheep-breed-classification-divyansh22,kaggle,divyansh22/sheep-breed-classification,yes,yes,folder_classification,sheep,cc-by-4.0,Sheep breed classification dataset
+sheep-breeds-alaayusufsiyamek,kaggle,alaayusufsiyamek/sheep-breeds-dataset,yes,yes,folder_classification,sheep,unknown,Sheep breeds dataset
+sheep-breeds-4skwhnrscr,mendeley,4skwhnrscr/2,yes,yes,yolo_detection,sheep,unknown,YOLO labels ignored for detection training; images included for classification manifest
+sheep-breeds-4ytic-roboflow,roboflow,biomedical-engineering-mansoura-university/sheep-breeds-4ytic,yes,yes,folder_classification,sheep,unknown,Roboflow sheep/goat folder classification export
+chicken-breeds-nk3zbvd5h8,mendeley,nk3zbvd5h8/1,yes,yes,folder_classification,chicken,unknown,Mirror of GalliformeSpectra original split (byte-identical to Kaggle source)
+pure-chicken-breeds-identification-roboflow,roboflow,sliit-aecgu/pure-chicken-breeds-identification,yes,yes,yolo_detection,chicken,unknown,YOLO labels ignored for detection training; images included for classification manifest
+galliformespectra-galibusm,kaggle,galibusm/galliformespectra-a-hen-breed-dataset,yes,yes,folder_classification,chicken,unknown,GalliformeSpectra hen breed dataset
+pig-detection-kaimq-a8ret-abpd,roboflow,rf100-vl/pig-detection-kaimq-a8ret-abpd,yes,yes,yolo_detection,pig,mit,YOLO labels ignored for detection training; images included for classification manifest
+pig-breed-identification-v3,roboflow,kalyani-government-engineering-college/pig-breed-identification,yes,yes,yolo_detection,pig,cc-by-4.0,YOLO labels ignored for detection training; images included for classification manifest
+pig-breed-identification-v5-pleseeeeee,roboflow,wowwww/pig-breed-identification-1wnjh,yes,yes,yolo_detection,pig,cc-by-4.0,YOLO labels ignored for detection training; images included for classification manifest
+buffalo-breeds-vdgnxsm692,mendeley,vdgnxsm692/2,yes,yes,folder_classification,buffalo,unknown,Buffalo breeds dataset from Mendeley
+camel-mdpi-2076-3417-13-14-8192,mdpi,2076-3417/13/14/8192,yes,yes,folder_classification,camel,unknown,Dataset reported as available on request from corresponding author (no public direct download)
+camel-classification-roboflow-v1,roboflow,project-ztqj0/camel-classification/dataset/1,yes,yes,folder_classification,dromedary,cc-by-4.0,Raw source added only; integration pending overlap check against v2/v3
+camel-classification-roboflow-v2,roboflow,project-ztqj0/camel-classification/dataset/2,yes,yes,folder_classification,dromedary,cc-by-4.0,Raw source added only; integration pending overlap check against v1/v3
+camel-classification-roboflow-v3,roboflow,project-ztqj0/camel-classification/dataset/3,yes,yes,folder_classification,dromedary,cc-by-4.0,Raw source added only; integration pending overlap check against v1/v2
+oxford-iiit-pet-vgg,official,vgg-oxford-iiit-pet,yes,yes,folder_classification,cat,unknown,Oxford-IIIT Pet dataset (cats and dogs) with species-aware labels
+stanford-dogs-imagenetdogs,official,vision.stanford.edu/aditya86/ImageNetDogs,yes,yes,folder_classification,dog,unknown,Stanford Dogs / ImageNetDogs dataset
+thudogs-tsinghua,official,cg.cs.tsinghua.edu.cn/ThuDogs,yes,yes,folder_classification,dog,unknown,Tsinghua Dogs dataset (multi-part cloud downloads; manual setup required)
+d2l-kaggle-dog-breed-id,tutorial,d2l.ai/chapter_computer-vision/kaggle-dog,yes,yes,folder_classification,dog,unknown,Tutorial reference for Kaggle dog breed identification (not a direct dataset source)
+catbreedsrefined-7k-doctrinek,kaggle,doctrinek/catbreedsrefined-7k,yes,yes,folder_classification,cat,unknown,Cat breeds refined dataset
+cat-breeds-ma7555,kaggle,ma7555/cat-breeds-dataset,yes,yes,folder_classification,cat,unknown,Cat breeds dataset
+cats-dogs-ng6tv57j5c,mendeley,ng6tv57j5c/2,yes,yes,folder_classification,cat,unknown,Mendeley cats/dogs dataset
+cat-breeds-2n7zk-roboflow,roboflow,cat-breed/cat-breeds-2n7zk,yes,yes,yolo_detection,cat,unknown,YOLO labels ignored for detection training; images included for classification manifest
+beef-cattle-muzzle-zenodo-6324361,zenodo,10.5281/zenodo.6324361,no,no,reference_only,cattle,cc-by-4.0,Excluded for current pipeline: close-up muzzle/noseprint biometrics only (not whole-animal species/breed imagery)
+rabbit-breed-classification-roboflow,roboflow,rabbit-management/rabbit-breed-classification,yes,yes,folder_classification,rabbit,unknown,Roboflow rabbit breed classification dataset (manual folder export/API required)
+multicamcows2024-data-bris,data_portal,data.bris.ac.uk/2inu67jru7a6821kkgehxg3cv2,yes,no,species_only_folder,cattle,unknown,MultiCamCows2024 (90 Holstein-Friesian cattle) species-only ingest recommended
+cowdatabase2-github-ruchaya,github,ruchaya/CowDatabase2,yes,yes,species_only_folder,cattle,unknown,CowDatabase2 RGB-D cattle data; all animals are Black Angus (breed fixed to black_angus while original folder ID is preserved)
+holstein-friesian-reid-2410-12695,arxiv,2410.12695,yes,no,reference_only,cattle,unknown,Paper reference for MultiCamCows2024 and re-ID methods (not directly ingested)
+recbov51c-8ysxtyf8p2,mendeley,8ysxtyf8p2/1,yes,no,species_only_folder,cattle,cc-by-4.0,RecBov51c with 51 individual bovines (useful for species-stage only)
+cattle-side-back-h2s22wr5py,mendeley,h2s22wr5py/2,yes,no,species_only_folder,cattle,cc-by-4.0,Cattle side/back views with measurements; not breed-labeled
+sheepbreed-64gkbz8bdb,mendeley,64gkbz8bdb/2,yes,yes,folder_classification,sheep,cc-by-4.0,On-farm sheep breed classification dataset (4 breeds)
+cattle-pig-sheep-cow-horse-amiteshpatra07,kaggle,amiteshpatra07/cattle-dataset-pig-sheep-cow-horse,yes,no,multi_species_yolo_detection,multi,unknown,YOLO labels used only to map species; images included for classification manifest
+donkeys-horses-zebra-ifeanyinneji,kaggle,ifeanyinneji/donkeys-horses-zebra-images-dataset,yes,no,multi_species_folder,multi,unknown,Keep only horse and donkey images; zebra excluded; species-only labels (breed=species)
+pig-dataset-zimange,kaggle,zimange/pig-dataset,yes,no,yolo_detection,pig,unknown,YOLO labels ignored for detection training; images included for classification manifest
+chicken-detection-tracking-nirmalsankalana,kaggle,nirmalsankalana/chicken-detection-and-tracking-dataset,yes,no,reference_only,chicken,unknown,Downloaded export lacks usable label files for ingest in current form (images only)
+farm-animals-v1i-yolo26-roboflow,roboflow,cmpe-249/farm-animals-yrpj3,yes,no,multi_species_yolo_detection,multi,cc-by-4.0,YOLO labels used only to map species; images included for classification manifest
+farm-animals-oxen-ai,oxen,oxen.ai/datasets/farm-animals,yes,no,reference_only,multi,unknown,Oxen.ai farm animals dataset (manual access/export workflow)
+donkey-breeds-wikimedia,wikimedia,Category:Donkey_breeds,yes,yes,folder_classification,donkey,cc-by-sa,Wikimedia Commons donkey-breed categories downloaded into breed folders
+turkey-breeds-wikimedia,wikimedia,custom-category-list-turkey-breeds,yes,yes,folder_classification,turkey,cc-by-sa,Wikimedia Commons turkey-breed categories downloaded from exact user-provided links into breed folders
+alpaca-wikimedia,wikimedia,custom-category-list-alpaca,yes,no,species_only_folder,alpaca,cc-by-sa,Wikimedia Commons alpaca images (species-only)
+bactrian-camel-wikimedia,wikimedia,custom-category-list-bactrian-camel,yes,no,species_only_folder,bactrian_camel,cc-by-sa,Wikimedia Commons bactrian camel images (species-only)
+cattle-breeds-wikimedia,wikimedia,custom-category-list-cattle-breeds,yes,yes,folder_classification,cattle,cc-by-sa,Wikimedia Commons cattle breed folders
+chicken-breeds-wikimedia,wikimedia,custom-category-list-chicken-breeds,yes,yes,folder_classification,chicken,cc-by-sa,Wikimedia Commons chicken breed folders
+dromedary-wikimedia,wikimedia,custom-category-list-dromedary,yes,no,species_only_folder,dromedary,cc-by-sa,Wikimedia Commons dromedary images (species-only)
+duck-breeds-wikimedia,wikimedia,custom-category-list-duck-breeds,yes,yes,folder_classification,duck,cc-by-sa,Wikimedia Commons duck breed folders
+goat-breeds-wikimedia,wikimedia,custom-category-list-goat-breeds,yes,yes,folder_classification,goat,cc-by-sa,Wikimedia Commons goat breed folders
+goose-breeds-wikimedia,wikimedia,custom-category-list-goose-breeds,yes,yes,folder_classification,goose,cc-by-sa,Wikimedia Commons goose breed folders
+horse-breeds-wikimedia,wikimedia,custom-category-list-horse-breeds,yes,yes,folder_classification,horse,cc-by-sa,Wikimedia Commons horse breed folders
+llama-wikimedia,wikimedia,custom-category-list-llama,yes,no,species_only_folder,llama,cc-by-sa,Wikimedia Commons llama images (species-only)
+peafowl-wikimedia,wikimedia,custom-category-list-peafowl,yes,no,species_only_folder,peafowl,cc-by-sa,Wikimedia Commons peafowl images (species-only)
+pig-breeds-wikimedia,wikimedia,custom-category-list-pig-breeds,yes,yes,folder_classification,pig,cc-by-sa,Wikimedia Commons pig breed folders
+pigeon-breeds-wikimedia,wikimedia,custom-category-list-pigeon-breeds,yes,yes,folder_classification,pigeon,cc-by-sa,Wikimedia Commons pigeon breed folders
+rabbit-breeds-wikimedia,wikimedia,custom-category-list-rabbit-breeds,yes,yes,folder_classification,rabbit,cc-by-sa,Wikimedia Commons rabbit breed folders
+sheep-breeds-wikimedia,wikimedia,custom-category-list-sheep-breeds,yes,yes,folder_classification,sheep,cc-by-sa,Wikimedia Commons sheep breed folders
+water-buffalo-wikimedia,wikimedia,custom-category-list-water-buffalo,yes,no,species_only_folder,water_buffalo,cc-by-sa,Wikimedia Commons water buffalo images (species-only)
+donkey-auto-dataset-roboflow-v4,roboflow,shukurullo-meliboev/donkey-auto-dataset/dataset/4,yes,no,yolo_detection,donkey,unknown,YOLO labels ignored for detection training; images included for classification manifest
+donkey-auto-dataset-roboflow-v5,roboflow,shukurullo-meliboev/donkey-auto-dataset/dataset/5,yes,no,yolo_detection,donkey,unknown,YOLO labels ignored for detection training; images included for classification manifest
+donkey-bdn3l-roboflow-v1,roboflow,test-rznll/donkey-bdn3l/dataset/1,yes,no,yolo_detection,donkey,unknown,YOLO labels ignored for detection training; images included for classification manifest
+turkey-v1i-yolo26-roboflow,roboflow,local/turkey-v1i-yolo26.zip,yes,no,yolo_detection,turkey,unknown,Local Roboflow export; YOLO labels ignored for detection training
+turkey-breeds-feathersite,feathersite,feathersite,yes,yes,folder_classification,turkey,unknown,Feathersite turkey breed pages scraped into folder classification layout
+alpaca-xqfiw-roboflow-v2,roboflow,alpaca-uljo6/alpaca-xqfiw/dataset/2,yes,no,yolo_detection,alpaca,unknown,YOLO labels ignored for detection training; images included for classification manifest
+alpaca-4lxyr-roboflow-v41,roboflow,macariola/alpaca-4lxyr/dataset/41,yes,no,yolo_detection,alpaca,unknown,YOLO labels ignored for detection training; images included for classification manifest
+llamas-anvhx-roboflow-v1,roboflow,jetcounterdemo/llamas-anvhx/dataset/1,yes,no,yolo_detection,llama,unknown,YOLO labels ignored for detection training; images included for classification manifest
+llamas-hardee-roboflow-v1,roboflow,hardee/llamas/dataset/1,yes,no,yolo_detection,llama,unknown,YOLO labels ignored for detection training; images included for classification manifest
+llamas-2tdzp-roboflow-v1,roboflow,ts-my9bt/llamas-2tdzp/dataset/1,yes,no,yolo_detection,llama,unknown,YOLO labels ignored for detection training; images included for classification manifest
+arabian-camel-classification2-roboflow-v1,roboflow,object-detection-workspace-l4onq/arabian-camel-classification2/dataset/1,yes,yes,createml_detection,dromedary,cc-by-4.0,CreateML detection export converted to image-level dominant class labels
+geese-counting-project-2-fipqg-roboflow-v4,roboflow,data-mining-2qphn/geese-counting-project-2-fipqg/dataset/4,yes,no,yolo_detection,goose,unknown,Species-only goose candidate from OBB export; labels used only for filtering
+inaturalist-bactrian-camel-manual,inaturalist,inaturalist-bactrian-camel-manual,yes,no,species_only_folder,bactrian_camel,cc0,Manual direct photo URLs downloaded to species-only folder
+inaturalist-camelus-ferus-cc0,inaturalist,inaturalist-camelus-ferus-cc0,yes,no,species_only_folder,bactrian_camel,cc0,CC0 Camelus ferus photos from iNaturalist browse/API
+inaturalist-camelus-bactrianus-cc-by,inaturalist,inaturalist-camelus-bactrianus-cc-by,yes,no,species_only_folder,bactrian_camel,cc-by,CC-BY photos with attribution CSV stored in raw folder

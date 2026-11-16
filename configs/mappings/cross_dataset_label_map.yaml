@@ -1,0 +1,853 @@
+version: cross_dataset_label_map_v2
+description: >
+  Canonical species/breed normalisation across mixed-source datasets.
+  Applied before taxonomy resolution during manifest ingestion.
+  v2 changes: added all missing species; added ImageNet dog-breed alias table;
+  added pig breed aliases; fixed "undefined → sheep" bug (now null); fixed
+  "friesian" collision; removed redundant dataset overrides; added dromedary
+  colour-label aliases; corrected encoding artefacts.
+
+normalization:
+  noise_tokens:
+    - class
+    - classes
+    - label
+    - labels
+    - animal
+    - animals
+    - breed
+    - breeds
+    - dataset
+    - image
+    - images
+
+# ─── SPECIES ──────────────────────────────────────────────────────────────────
+species:
+  - canonical_id: dog
+    aliases: [dog, dogs, canine, canis_familiaris, domestic_dog]
+  - canonical_id: cat
+    aliases: [cat, cats, feline, domestic_cat]
+  - canonical_id: cattle
+    aliases: [cattle, cow, cows, bovine, bull, calf, ox, ow]
+    # "ow" is a farm-animals-v1i dataset-specific artefact
+  - canonical_id: horse
+    aliases: [horse, horses, equine]
+  - canonical_id: sheep
+    aliases: [sheep, ovine, lamb]
+  - canonical_id: goat
+    aliases: [goat, goats, caprine]
+  - canonical_id: pig
+    aliases: [pig, pigs, swine, hog, pork]
+  - canonical_id: rabbit
+    aliases: [rabbit, rabbits, bunny, bunnies, domestic_rabbit]
+  - canonical_id: chicken
+    aliases: [chicken, chickens, hen, hens, rooster, roosters, poultry]
+  - canonical_id: turkey
+    aliases: [turkey, turkeys]
+  - canonical_id: duck
+    aliases: [duck, ducks, duckling, ducclair]
+  - canonical_id: goose
+    aliases: [goose, geese, gander]
+  - canonical_id: donkey
+    aliases: [donkey, donkeys, burro, jackass]
+    # NOTE: "ass" intentionally omitted — too ambiguous in mixed-label contexts
+  - canonical_id: peafowl
+    aliases: [peafowl, peacock, peahen, peachick, indian_peafowl]
+  - canonical_id: pigeon
+    aliases: [pigeon, pigeons]
+    # NOTE: "dove" / "doves" deliberately NOT included — taxonomically distinct.
+    # Add a dataset_override below if a specific dataset mislabels doves as pigeons.
+  - canonical_id: llama
+    aliases: [llama, llamas]
+  - canonical_id: alpaca
+    aliases: [alpaca, alpacas]
+  - canonical_id: dromedary
+    aliases: [dromedary, dromedaries, arabian_camel, camelus_dromedarius,
+              single_hump_camel]
+  - canonical_id: bactrian_camel
+    aliases: [bactrian, bactrian_camel, two_hump_camel, camelus_bactrianus]
+  - canonical_id: camel
+    aliases: [camel, camels, camelidae]
+    note: Use dromedary or bactrian_camel when species is known.
+  - canonical_id: water_buffalo
+    aliases: [water_buffalo, water_buffaloes, buffalo, buffaloes, bubalus_bubalis]
+
+# ─── BREEDS ───────────────────────────────────────────────────────────────────
+breeds:
+
+  # ── Dog — ImageNet canonical mapping ──────────────────────────────────────
+  # The Oxford-IIIT / ImageNet dog dataset uses "n02XXXXXXX_breed_name" IDs.
+  # These aliases map the raw ImageNet labels to clean canonical breed IDs.
+  - canonical_id: dog:afghan_hound
+    species_id: dog
+    aliases: [afghan_hound, afghan, n02088094_afghan_hound]
+  - canonical_id: dog:airedale
+    species_id: dog
+    aliases: [airedale, airedale_terrier, n02096051_airedale]
+  - canonical_id: dog:affenpinscher
+    species_id: dog
+    aliases: [affenpinscher, n02110627_affenpinscher]
+  - canonical_id: dog:basenji
+    species_id: dog
+    aliases: [basenji, n02110806_basenji]
+  - canonical_id: dog:basset
+    species_id: dog
+    aliases: [basset, basset_hound, n02088238_basset]
+  - canonical_id: dog:beagle
+    species_id: dog
+    aliases: [beagle, n02088364_beagle]
+  - canonical_id: dog:bedlington_terrier
+    species_id: dog
+    aliases: [bedlington_terrier, bedlington, n02093647_bedlington_terrier]
+  - canonical_id: dog:bernese_mountain
+    species_id: dog
+    aliases: [bernese_mountain, bernese_mountain_dog, n02107683_bernese_mountain]
+  - canonical_id: dog:bloodhound
+    species_id: dog
+    aliases: [bloodhound, n02088466_bloodhound]
+  - canonical_id: dog:border_collie
+    species_id: dog
+    aliases: [border_collie, n02106166_border_collie]
+  - canonical_id: dog:border_terrier
+    species_id: dog
+    aliases: [border_terrier, n02093754_border_terrier]
+  - canonical_id: dog:borzoi
+    species_id: dog
+    aliases: [borzoi, russian_wolfhound, n02090622_borzoi]
+  - canonical_id: dog:boston_bull
+    species_id: dog
+    aliases: [boston_bull, boston_terrier, n02096585_boston_bull]
+  - canonical_id: dog:bouvier_des_flandres
+    species_id: dog
+    aliases: [bouvier_des_flandres, bouvier, n02106382_bouvier_des_flandres]
+  - canonical_id: dog:boxer
+    species_id: dog
+    aliases: [boxer, n02108089_boxer]
+  - canonical_id: dog:briard
+    species_id: dog
+    aliases: [briard, n02105251_briard]
+  - canonical_id: dog:brittany_spaniel
+    species_id: dog
+    aliases: [brittany_spaniel, brittany, n02101388_brittany_spaniel]
+  - canonical_id: dog:bull_mastiff
+    species_id: dog
+    aliases: [bull_mastiff, bullmastiff, n02108422_bull_mastiff]
+  - canonical_id: dog:cairn
+    species_id: dog
+    aliases: [cairn, cairn_terrier, n02096177_cairn]
+  - canonical_id: dog:chihuahua
+    species_id: dog
+    aliases: [chihuahua, n02085620_chihuahua]
+  - canonical_id: dog:chow
+    species_id: dog
+    aliases: [chow, chow_chow, n02112137_chow]
+  - canonical_id: dog:cocker_spaniel
+    species_id: dog
+    aliases: [cocker_spaniel, american_cocker_spaniel, n02102318_cocker_spaniel]
+  - canonical_id: dog:collie
+    species_id: dog
+    aliases: [collie, rough_collie, n02106030_collie]
+  - canonical_id: dog:doberman
+    species_id: dog
+    aliases: [doberman, doberman_pinscher, dobermann, n02107142_doberman]
+  - canonical_id: dog:english_setter
+    species_id: dog
+    aliases: [english_setter, n02100735_english_setter]
+  - canonical_id: dog:english_springer
+    species_id: dog
+    aliases: [english_springer, english_springer_spaniel, n02102040_english_springer]
+  - canonical_id: dog:flat_coated_retriever
+    species_id: dog
+    aliases: [flat_coated_retriever, n02099267_flat_coated_retriever]
+  - canonical_id: dog:french_bulldog
+    species_id: dog
+    aliases: [french_bulldog, frenchie, n02108915_french_bulldog]
+  - canonical_id: dog:german_shepherd
+    species_id: dog
+    aliases: [german_shepherd, german_shepherd_dog, alsatian, n02106662_german_shepherd]
+  - canonical_id: dog:german_short_haired_pointer
+    species_id: dog
+    aliases: [german_short_haired_pointer, gsp, n02100236_german_short_haired_pointer]
+  - canonical_id: dog:golden_retriever
+    species_id: dog
+    aliases: [golden_retriever, golden, n02099601_golden_retriever]
+  - canonical_id: dog:gordon_setter
+    species_id: dog
+    aliases: [gordon_setter, n02101006_gordon_setter]
+  - canonical_id: dog:great_dane
+    species_id: dog
+    aliases: [great_dane, n02109047_great_dane]
+  - canonical_id: dog:great_pyrenees
+    species_id: dog
+    aliases: [great_pyrenees, pyrenean_mountain, n02111500_great_pyrenees]
+  - canonical_id: dog:groenendael
+    species_id: dog
+    aliases: [groenendael, belgian_shepherd, n02105056_groenendael]
+  - canonical_id: dog:ibizan_hound
+    species_id: dog
+    aliases: [ibizan_hound, n02091244_ibizan_hound]
+  - canonical_id: dog:irish_setter
+    species_id: dog
+    aliases: [irish_setter, n02100877_irish_setter]
+  - canonical_id: dog:irish_terrier
+    species_id: dog
+    aliases: [irish_terrier, n02093991_irish_terrier]
+  - canonical_id: dog:irish_wolfhound
+    species_id: dog
+    aliases: [irish_wolfhound, n02090721_irish_wolfhound]
+  - canonical_id: dog:italian_greyhound
+    species_id: dog
+    aliases: [italian_greyhound, n02091032_italian_greyhound]
+  - canonical_id: dog:kelpie
+    species_id: dog
+    aliases: [kelpie, australian_kelpie, n02105412_kelpie]
+  - canonical_id: dog:komondor
+    species_id: dog
+    aliases: [komondor, n02105505_komondor]
+  - canonical_id: dog:kuvasz
+    species_id: dog
+    aliases: [kuvasz, n02104029_kuvasz]
+  - canonical_id: dog:labrador_retriever
+    species_id: dog
+    aliases: [labrador_retriever, labrador, lab, n02099712_labrador_retriever]
+  - canonical_id: dog:lakeland_terrier
+    species_id: dog
+    aliases: [lakeland_terrier, lakeland, n02095570_lakeland_terrier]
+  - canonical_id: dog:leonberg
+    species_id: dog
+    aliases: [leonberg, leonberger, n02111129_leonberg]
+  - canonical_id: dog:lhasa
+    species_id: dog
+    aliases: [lhasa, lhasa_apso, n02098413_lhasa]
+  - canonical_id: dog:malamute
+    species_id: dog
+    aliases: [malamute, alaskan_malamute, n02110063_malamute]
+  - canonical_id: dog:malinois
+    species_id: dog
+    aliases: [malinois, belgian_malinois, n02105162_malinois]
+  - canonical_id: dog:maltese
+    species_id: dog
+    aliases: [maltese, n02085936_maltese]
+  - canonical_id: dog:miniature_pinscher
+    species_id: dog
+    aliases: [miniature_pinscher, min_pin, n02107312_miniature_pinscher]
+  - canonical_id: dog:miniature_poodle
+    species_id: dog
+    aliases: [miniature_poodle, mini_poodle, n02113712_miniature_poodle]
+  - canonical_id: dog:miniature_schnauzer
+    species_id: dog
+    aliases: [miniature_schnauzer, mini_schnauzer, n02097047_miniature_schnauzer]
+  - canonical_id: dog:newfoundland
+    species_id: dog
+    aliases: [newfoundland, newfie, n02111277_newfoundland]
+  - canonical_id: dog:norwegian_elkhound
+    species_id: dog
+    aliases: [norwegian_elkhound, n02091467_norwegian_elkhound]
+  - canonical_id: dog:norwich_terrier
+    species_id: dog
+    aliases: [norwich_terrier, n02094258_norwich_terrier]
+  - canonical_id: dog:otterhound
+    species_id: dog
+    aliases: [otterhound, n02091635_otterhound]
+  - canonical_id: dog:papillon
+    species_id: dog
+    aliases: [papillon, n02086910_papillon]
+  - canonical_id: dog:pekinese
+    species_id: dog
+    aliases: [pekinese, pekingese, peke, n02086079_pekinese]
+  - canonical_id: dog:pembroke
+    species_id: dog
+    aliases: [pembroke, pembroke_corgi, welsh_corgi, n02113023_pembroke]
+  - canonical_id: dog:pomeranian
+    species_id: dog
+    aliases: [pomeranian, pom, n02112018_pomeranian]
+  - canonical_id: dog:pug
+    species_id: dog
+    aliases: [pug, n02110958_pug]
+  - canonical_id: dog:rhodesian_ridgeback
+    species_id: dog
+    aliases: [rhodesian_ridgeback, ridgeback, n02087394_rhodesian_ridgeback]
+  - canonical_id: dog:rottweiler
+    species_id: dog
+    aliases: [rottweiler, rottie, n02106550_rottweiler]
+  - canonical_id: dog:saint_bernard
+    species_id: dog
+    aliases: [saint_bernard, st_bernard, n02109525_saint_bernard]
+  - canonical_id: dog:saluki
+    species_id: dog
+    aliases: [saluki, persian_greyhound, n02091831_saluki]
+  - canonical_id: dog:samoyed
+    species_id: dog
+    aliases: [samoyed, sammy, n02111889_samoyed]
+  - canonical_id: dog:schipperke
+    species_id: dog
+    aliases: [schipperke, n02104365_schipperke]
+  - canonical_id: dog:scotch_terrier
+    species_id: dog
+    aliases: [scotch_terrier, scottish_terrier, scottie, n02097298_scotch_terrier]
+  - canonical_id: dog:scottish_deerhound
+    species_id: dog
+    aliases: [scottish_deerhound, n02092002_scottish_deerhound]
+  - canonical_id: dog:sealyham_terrier
+    species_id: dog
+    aliases: [sealyham_terrier, sealyham, n02095889_sealyham_terrier]
+  - canonical_id: dog:shetland_sheepdog
+    species_id: dog
+    aliases: [shetland_sheepdog, sheltie, n02105855_shetland_sheepdog]
+  - canonical_id: dog:shih_tzu
+    species_id: dog
+    aliases: [shih_tzu, n02086240_shih_tzu]
+  - canonical_id: dog:siberian_husky
+    species_id: dog
+    aliases: [siberian_husky, husky, n02110185_siberian_husky]
+  - canonical_id: dog:silky_terrier
+    species_id: dog
+    aliases: [silky_terrier, n02097658_silky_terrier]
+  - canonical_id: dog:soft_coated_wheaten_terrier
+    species_id: dog
+    aliases: [soft_coated_wheaten_terrier, wheaten_terrier, n02098105_soft_coated_wheaten_terrier]
+  - canonical_id: dog:staffordshire_bullterrier
+    species_id: dog
+    aliases: [staffordshire_bullterrier, staffy, n02093256_staffordshire_bullterrier]
+  - canonical_id: dog:standard_poodle
+    species_id: dog
+    aliases: [standard_poodle, poodle, n02113799_standard_poodle]
+  - canonical_id: dog:standard_schnauzer
+    species_id: dog
+    aliases: [standard_schnauzer, schnauzer, n02097209_standard_schnauzer]
+  - canonical_id: dog:tibetan_mastiff
+    species_id: dog
+    aliases: [tibetan_mastiff, n02108551_tibetan_mastiff]
+  - canonical_id: dog:tibetan_terrier
+    species_id: dog
+    aliases: [tibetan_terrier, n02097474_tibetan_terrier]
+  - canonical_id: dog:toy_poodle
+    species_id: dog
+    aliases: [toy_poodle, n02113624_toy_poodle]
+  - canonical_id: dog:toy_terrier
+    species_id: dog
+    aliases: [toy_terrier, n02087046_toy_terrier]
+  - canonical_id: dog:vizsla
+    species_id: dog
+    aliases: [vizsla, hungarian_pointer, n02100583_vizsla]
+  - canonical_id: dog:weimaraner
+    species_id: dog
+    aliases: [weimaraner, n02092339_weimaraner]
+  - canonical_id: dog:welsh_springer_spaniel
+    species_id: dog
+    aliases: [welsh_springer_spaniel, welsh_springer, n02102177_welsh_springer_spaniel]
+  - canonical_id: dog:west_highland_white_terrier
+    species_id: dog
+    aliases: [west_highland_white_terrier, westie, n02098286_west_highland_white_terrier]
+  - canonical_id: dog:whippet
+    species_id: dog
+    aliases: [whippet, n02091134_whippet]
+  - canonical_id: dog:wire_haired_fox_terrier
+    species_id: dog
+    aliases: [wire_haired_fox_terrier, wire_fox_terrier, n02095314_wire_haired_fox_terrier]
+  - canonical_id: dog:yorkshire_terrier
+    species_id: dog
+    aliases: [yorkshire_terrier, yorkie, n02094433_yorkshire_terrier]
+
+  # ── Cat ───────────────────────────────────────────────────────────────────
+  - canonical_id: cat:persian
+    species_id: cat
+    aliases: [persian]
+  - canonical_id: cat:maine_coon
+    species_id: cat
+    aliases: [maine_coon, mainecoon]
+  - canonical_id: cat:siamese
+    species_id: cat
+    aliases: [siamese, siamese_type, siamese-type, applehead_siamese]
+  - canonical_id: cat:british_shorthair
+    species_id: cat
+    aliases: [british_shorthair, british, british-type, british_type]
+  - canonical_id: cat:bengal
+    species_id: cat
+    aliases: [bengal]
+  - canonical_id: cat:ragdoll
+    species_id: cat
+    aliases: [ragdoll]
+  - canonical_id: cat:sphynx
+    species_id: cat
+    aliases: [sphynx, sphynx_hairless_cat]
+  - canonical_id: cat:canadian_hairless
+    species_id: cat
+    aliases: [canadian_hairless, sphynx_hairless]
+  - canonical_id: cat:oriental
+    species_id: cat
+    aliases: [oriental, oriental_short_hair, oriental-short-hair,
+              oriental_long_hair, oriental_tabby]
+  - canonical_id: cat:american_shorthair
+    species_id: cat
+    aliases: [american_shorthair, american_short, american-short-type,
+              american_short_type]
+  - canonical_id: cat:abyssinian
+    species_id: cat
+    aliases: [abyssinian]
+  - canonical_id: cat:american_bobtail
+    species_id: cat
+    aliases: [american_bobtail]
+  - canonical_id: cat:american_curl
+    species_id: cat
+    aliases: [american_curl]
+  - canonical_id: cat:american_wirehair
+    species_id: cat
+    aliases: [american_wirehair]
+  - canonical_id: cat:balinese
+    species_id: cat
+    aliases: [balinese]
+  - canonical_id: cat:birman
+    species_id: cat
+    aliases: [birman]
+  - canonical_id: cat:bombay
+    species_id: cat
+    aliases: [bombay]
+  - canonical_id: cat:burmese
+    species_id: cat
+    aliases: [burmese]
+  - canonical_id: cat:burmilla
+    species_id: cat
+    aliases: [burmilla]
+  - canonical_id: cat:chartreux
+    species_id: cat
+    aliases: [chartreux]
+  - canonical_id: cat:chausie
+    species_id: cat
+    aliases: [chausie]
+  - canonical_id: cat:chinchilla
+    species_id: cat
+    aliases: [chinchilla]
+  - canonical_id: cat:cornish_rex
+    species_id: cat
+    aliases: [cornish_rex]
+  - canonical_id: cat:cymric
+    species_id: cat
+    aliases: [cymric]
+  - canonical_id: cat:devon_rex
+    species_id: cat
+    aliases: [devon_rex]
+  - canonical_id: cat:domestic_long_hair
+    species_id: cat
+    aliases: [domestic_long_hair, domestic_longhair]
+  - canonical_id: cat:domestic_medium_hair
+    species_id: cat
+    aliases: [domestic_medium_hair, domestic_mediumhair]
+  - canonical_id: cat:domestic_short_hair
+    species_id: cat
+    aliases: [domestic_short_hair, domestic_shorthair]
+  - canonical_id: cat:egyptian_mau
+    species_id: cat
+    aliases: [egyptian_mau]
+  - canonical_id: cat:exotic_shorthair
+    species_id: cat
+    aliases: [exotic_shorthair]
+  - canonical_id: cat:polydactyl
+    species_id: cat
+    aliases: [extra_toes_cat_hemingway_polydactyl, hemingway_polydactyl, polydactyl]
+  - canonical_id: cat:havana
+    species_id: cat
+    aliases: [havana, havana_brown]
+  - canonical_id: cat:himalayan
+    species_id: cat
+    aliases: [himalayan]
+  - canonical_id: cat:japanese_bobtail
+    species_id: cat
+    aliases: [japanese_bobtail]
+  - canonical_id: cat:javanese
+    species_id: cat
+    aliases: [javanese]
+  - canonical_id: cat:korat
+    species_id: cat
+    aliases: [korat]
+  - canonical_id: cat:laperm
+    species_id: cat
+    aliases: [laperm, la_perm]
+  - canonical_id: cat:manx
+    species_id: cat
+    aliases: [manx]
+  - canonical_id: cat:munchkin
+    species_id: cat
+    aliases: [munchkin]
+  - canonical_id: cat:nebelung
+    species_id: cat
+    aliases: [nebelung]
+  - canonical_id: cat:norwegian_forest_cat
+    species_id: cat
+    aliases: [norwegian_forest_cat, norwegian_forest]
+  - canonical_id: cat:ocicat
+    species_id: cat
+    aliases: [ocicat]
+  - canonical_id: cat:pixiebob
+    species_id: cat
+    aliases: [pixiebob, pixie_bob]
+  - canonical_id: cat:ragamuffin
+    species_id: cat
+    aliases: [ragamuffin]
+  - canonical_id: cat:russian_blue
+    species_id: cat
+    aliases: [russian_blue]
+  - canonical_id: cat:scottish_fold
+    species_id: cat
+    aliases: [scottish_fold]
+  - canonical_id: cat:selkirk_rex
+    species_id: cat
+    aliases: [selkirk_rex]
+  - canonical_id: cat:siberian
+    species_id: cat
+    aliases: [siberian]
+  - canonical_id: cat:singapura
+    species_id: cat
+    aliases: [singapura]
+  - canonical_id: cat:snowshoe
+    species_id: cat
+    aliases: [snowshoe]
+  - canonical_id: cat:somali
+    species_id: cat
+    aliases: [somali]
+  - canonical_id: cat:tonkinese
+    species_id: cat
+    aliases: [tonkinese]
+  - canonical_id: cat:turkish_angora
+    species_id: cat
+    aliases: [turkish_angora]
+  - canonical_id: cat:turkish_van
+    species_id: cat
+    aliases: [turkish_van]
+  - canonical_id: cat:york_chocolate
+    species_id: cat
+    aliases: [york_chocolate]
+
+  # ── Cattle ────────────────────────────────────────────────────────────────
+  - canonical_id: cattle:holstein_friesian
+    species_id: cattle
+    aliases: [holstein_friesian, holstein, holstain_friesian, fresian,
+              friesian_cattle, prim_holstein]
+    # NOTE: bare "friesian" is NOT here — use "friesian_cattle" or
+    # "holstein_friesian". See horse:friesian for the equine breed.
+  - canonical_id: cattle:angus
+    species_id: cattle
+    aliases: [angus, aberdeen_angus, american_angus, red_angus]
+  - canonical_id: cattle:brahman
+    species_id: cattle
+    aliases: [brahman]
+  - canonical_id: cattle:hereford
+    species_id: cattle
+    aliases: [hereford, polled_hereford]
+  - canonical_id: cattle:watusi
+    species_id: cattle
+    aliases: [watusi, ankole, ankole_watusi]
+  - canonical_id: cattle:sahiwal
+    species_id: cattle
+    aliases: [sahiwal]
+  - canonical_id: cattle:sahiwal_cross
+    species_id: cattle
+    aliases: [sahiwal_cross]
+  - canonical_id: cattle:cholistani
+    species_id: cattle
+    aliases: [cholistani]
+  - canonical_id: cattle:cholistani_cross
+    species_id: cattle
+    aliases: [cholistani_cross]
+  - canonical_id: cattle:dhanni
+    species_id: cattle
+    aliases: [dhanni, dhani]
+  - canonical_id: cattle:kankrej
+    species_id: cattle
+    aliases: [kankrej, kankarej]
+  - canonical_id: cattle:sibbi
+    species_id: cattle
+    aliases: [sibbi]
+  - canonical_id: cattle:brahman_cross
+    species_id: cattle
+    aliases: [brahman_cross]
+  - canonical_id: cattle:holstein_friesian_cross
+    species_id: cattle
+    aliases: [friesian_cattle_cross, holstein_friesian_cross, fresian_cross]
+  - canonical_id: cattle:local_deshi
+    species_id: cattle
+    aliases: [local_deshi, deshi, local_deshi_cattle]
+
+  # Water buffalo
+  - canonical_id: water_buffalo:kundi
+    species_id: water_buffalo
+    aliases: [kundi, khundi]
+  - canonical_id: water_buffalo:nili_ravi
+    species_id: water_buffalo
+    aliases: [nili_ravi, nili-ravi, neli_ravi, neli-ravi]
+
+  # ── Horse ─────────────────────────────────────────────────────────────────
+  - canonical_id: horse:arabian
+    species_id: horse
+    aliases: [arabian, arabian_horse, arab]
+  - canonical_id: horse:friesian
+    species_id: horse
+    aliases: [friesian, friesian_horse]
+    # NOTE: bare "friesian" maps to horse only in horse-specific datasets.
+    # In mixed cattle+horse datasets, prefer "friesian_horse" to avoid collision
+    # with cattle:holstein_friesian.
+  - canonical_id: horse:thoroughbred
+    species_id: horse
+    aliases: [thoroughbred]
+  - canonical_id: horse:quarter_horse
+    species_id: horse
+    aliases: [quarter_horse, american_quarter_horse, quarter]
+
+  # ── Sheep ─────────────────────────────────────────────────────────────────
+  - canonical_id: sheep:merino
+    species_id: sheep
+    aliases: [merino, marino]   # "marino" is common typo
+  - canonical_id: sheep:dorset
+    species_id: sheep
+    aliases: [dorset_horn, dorset_down, polled_dorset, poll_dorset, horn_dorset]
+  - canonical_id: sheep:corriedale
+    species_id: sheep
+    aliases: [corriedale, north_bulgarian_corriedale, south_bulgarian_corriedale]
+
+  # ── Goat ──────────────────────────────────────────────────────────────────
+  - canonical_id: goat:boer
+    species_id: goat
+    aliases: [boer, boer_goat, kalahari_red]
+  - canonical_id: goat:toggenburg
+    species_id: goat
+    aliases: [toggenburger, toggenburg]
+
+  # ── Pig ───────────────────────────────────────────────────────────────────
+  - canonical_id: pig:duroc
+    species_id: pig
+    aliases: [duroc]
+  - canonical_id: pig:berkshire
+    species_id: pig
+    aliases: [berkshire]
+  - canonical_id: pig:landrace
+    species_id: pig
+    aliases: [landrace]
+  - canonical_id: pig:pietrain
+    species_id: pig
+    aliases: [pietrain]
+  - canonical_id: pig:american_yorkshire
+    species_id: pig
+    aliases: [yorkshire, large_white, american_yorkshire]
+
+  # ── Rabbit ────────────────────────────────────────────────────────────────
+  - canonical_id: rabbit:netherland_dwarf
+    species_id: rabbit
+    aliases: [netherland_dwarf]
+  - canonical_id: rabbit:holland_lop
+    species_id: rabbit
+    aliases: [holland_lop]
+
+  # ── Chicken ───────────────────────────────────────────────────────────────
+  - canonical_id: chicken:rhode_island_red
+    species_id: chicken
+    aliases: [rhode_island_red, rir]   # "rir" is abbreviation used in raw datasets
+  - canonical_id: chicken:leghorn
+    species_id: chicken
+    aliases: [leghorn]
+  - canonical_id: chicken:new_hampshire
+    species_id: chicken
+    aliases: [new_hampshire, newhampshire]   # typo variant from training data
+  - canonical_id: chicken:plymouth_rock
+    species_id: chicken
+    aliases: [plymouth_rock, plymouthrock, blue_plymouthrock]
+  - canonical_id: chicken:orpington
+    species_id: chicken
+    aliases: [orpington, buff_oprington, black_orpington, blackorpington]
+  - canonical_id: chicken:brahma
+    species_id: chicken
+    aliases: [brahma]
+  - canonical_id: chicken:bielefelder
+    species_id: chicken
+    aliases: [bielefelder]
+  - canonical_id: chicken:buckeye
+    species_id: chicken
+    aliases: [buckeye]
+  - canonical_id: chicken:fayoumi
+    species_id: chicken
+    aliases: [fayoumi]
+  - canonical_id: chicken:sussex
+    species_id: chicken
+    aliases: [sussex]
+  - canonical_id: chicken:turken
+    species_id: chicken
+    aliases: [turken, naked_neck]
+
+  # ── Dromedary colour-labels ───────────────────────────────────────────────
+  # The Roboflow camel dataset labelled by coat colour rather than breed.
+  # Map them to colour-specific breed IDs rather than plain dromedary species.
+  - canonical_id: dromedary:color_black
+    species_id: dromedary
+    aliases: [black-camel, black_camel]
+  - canonical_id: dromedary:color_white
+    species_id: dromedary
+    aliases: [white-camel, white_camel]
+  - canonical_id: dromedary:color_yellowish
+    species_id: dromedary
+    aliases: [yellowish-camel, yellowish_camel]
+  - canonical_id: dromedary:color_reddish_brown
+    species_id: dromedary
+    aliases: [reddish-brown-camel, reddish_brown_camel]
+
+  # ── Goose ─────────────────────────────────────────────────────────────────
+  - canonical_id: goose:norwegian_white
+    species_id: goose
+    aliases: [norwegian_white, norwegian_whith]   # typo in training data
+
+# ─── DATASET-SPECIFIC OVERRIDES ───────────────────────────────────────────────
+dataset_overrides:
+
+  arabian-camel-classification2-roboflow-v1:
+    species:
+      # Colour-coded dromedary labels
+      black-camel: dromedary
+      reddish-brown-camel: dromedary
+      white-camel: dromedary
+      yellowish-camel: dromedary
+
+  camel-of42k-rf:
+    species:
+      camel: dromedary   # This dataset is all dromedaries
+
+  cat-breeds-vjndm-rf:
+    # All labels are cat species, already resolved by taxonomy
+    species:
+      abyssinian: cat
+      american-short-type: cat
+      bengal: cat
+      birman: cat
+      bombay: cat
+      british-type: cat
+      burmese: cat
+      egyptian-mau: cat
+      exotic-shorthair: cat
+      japanese-bobtail: cat
+      maine-coon: cat
+      munchkin: cat
+      norwegian-forest: cat
+      oriental: cat
+      persian: cat
+      ragdoll: cat
+      rex-type: cat
+      russian-blue: cat
+      scottish-fold: cat
+      siamese-type: cat
+      siberian: cat
+      turkish-angora: cat
+
+  farm-animals-v1i-yolo26-roboflow:
+    species:
+      cow: cattle
+      ow: cattle      # Likely "ow" = OCR artefact of "cow"
+      peacock: peafowl
+      # Dropped labels:
+      cpw: null        # Unknown label — context unclear, safely dropped
+      human: null      # Humans are not animals to classify
+
+  cattle-pig-sheep-cow-horse-amitashpatra07:
+    species:
+      cow: cattle
+      # FIX: "undefined" was previously mapped to sheep — this was wrong.
+      # "undefined" has no reliable species assignment; drop it.
+      undefined: null
+
+  detection-of-stray-dogs-v1-rf:
+    species:
+      # This dataset has only one class (stray dogs), labelled as "0"
+      "0": dog
+
+  cow-buffalo-rf-v1:
+    species:
+      # Roboflow exports only numeric class names 0-11 and no reliable
+      # class-name mapping in local COCO/CreateML/OpenAI/YOLO exports.
+      # Do not guess cattle vs water buffalo from numeric IDs.
+      "0": null
+      "1": null
+      "2": null
+      "3": null
+      "4": null
+      "5": null
+      "6": null
+      "7": null
+      "8": null
+      "9": null
+      "10": null
+      "11": null
+
+  goat-detector-v2-rf:
+    species:
+      # These are numeric bounding-box index labels from a non-standard export
+      # format. All confirmed to be goat images. Retained with comment.
+      # TODO: re-export dataset with proper class names when possible.
+      "13-22": goat
+      "2-20": goat
+      "21-19": goat
+      "22-19": goat
+      "5-17": goat
+      "53-15": goat
+      "6-22": goat
+      "7-20": goat
+      "7-22": goat
+
+  peacock-fibzw-v2-rf:
+    species:
+      indian-peafowl: peafowl
+
+  pig-breed-identification-v3:
+    # Breed-level labels; map to pig species so they can be resolved to breeds
+    species:
+      duroc: pig
+      berkshire: pig
+      landrace: pig
+      pietrain: pig
+
+  pig-detection-kaimq-a8ret-abpd:
+    # FIX: previously all mapped only to pig species, losing breed information.
+    # Now the species is pig; breed will be resolved from the label text via
+    # the global breeds table (berkshire, landrace, pietrain, duroc).
+    species:
+      berkshire: pig
+      duroc: pig
+      landrace: pig
+      pietrain: pig
+    breeds:
+      berkshire: pig:berkshire
+      duroc: pig:duroc
+      landrace: pig:landrace
+      pietrain: pig:pietrain
+
+  pigeon-detection-6ompk-v5-rf:
+    species:
+      # "plumpigeon" is the raw Roboflow class name for common pigeon
+      plumpigeon: pigeon
+
+  project-goat-v6-rf:
+    species:
+      # Same numeric-label issue as goat-detector-v2-rf
+      "13-22": goat
+      "2-20": goat
+      "21-19": goat
+      "22-19": goat
+      "5-17": goat
+      "53-15": goat
+      "6-22": goat
+      "7-20": goat
+      "7-22": goat
+
+  pure-chicken-breeds-identification-roboflow:
+    species:
+      australorp: chicken
+      black-star-chicken: chicken
+      blue-plymouthrock: chicken
+      brahma: chicken
+      golden-comet: chicken
+      leghorn: chicken
+      lohmann: chicken
+      plymouthrock: chicken
+      rir: chicken
+      wyandotte: chicken
+
+  sheep-detection-vg9sh-v27-rf:
+    species:
+      # This mixed dataset has both sheep and cattle images
+      cow: cattle
+      uav-sheep: sheep   # "uav-sheep" = aerial-imagery sheep label

@@ -1,0 +1,15 @@
+# Add dataset-specific synonym mappings here as needed.
+# keys and values should be canonical snake_case labels.
+akhal_teke: akhal_teke
+appaloosa: appaloosa
+arabian: arabian
+criollo: criollo
+crioulo: criollo
+freiberger: freiberger
+friesian: friesian
+horse: unknown
+orlov_trotter: orlov_trotter
+percheron: percheron
+thoroughbred: thoroughbred
+urfreiberger: freiberger
+vladimir_heavy_draft: vladimir_heavy_draft

@@ -1,2 +1,5 @@
-"""Evaluation metrics and benchmarking utilities."""
+﻿"""Evaluation package."""
 
+from .runner import evaluate
+
+__all__ = ["evaluate"]

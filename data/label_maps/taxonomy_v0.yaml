@@ -1,157 +1,1203 @@
-version: taxonomy_v0
+version: taxonomy_v1
 description: >
-  Initial domestic-animal hierarchy. This file is the source of truth for
-  species identifiers, breed identifiers, aliases, and species-to-breed mapping.
+  Domestic-animal hierarchy. Source of truth for species identifiers, breed
+  identifiers, aliases and species-to-breed mapping.
+  v1 changes vs v0: added 12 species that were missing (duck, goose, donkey,
+  dromedary, peafowl, pigeon, turkey, llama, alpaca, camel, bactrian_camel,
+  water_buffalo); expanded breed lists to match trained classifiers; fixed
+  "friesian" alias collision between cattle and horse; cleaned up numeric/
+  encoding artefacts.
+
 unknown_policy:
   species_id: unknown_species
-  breed_id: unknown_breed
+  breed_id:   unknown_breed
   allow_unknown_breed_for_training: false
 
+# ─── SPECIES ──────────────────────────────────────────────────────────────────
 species:
   - id: dog
     name: Dog
-    aliases: [canine, domestic_dog]
+    aliases: [dog, dogs, canine, canis_familiaris, domestic_dog]
   - id: cat
     name: Cat
-    aliases: [feline, domestic_cat]
+    aliases: [cat, cats, feline, domestic_cat]
   - id: cattle
     name: Cattle
-    aliases: [cow, bull, calf, bovine]
+    aliases: [cattle, cow, cows, bovine, bull, calf, ox]
   - id: horse
     name: Horse
-    aliases: [equine]
+    aliases: [horse, horses, equine]
   - id: sheep
     name: Sheep
-    aliases: [ovine]
+    aliases: [sheep, ovine, lamb]
   - id: goat
     name: Goat
-    aliases: [caprine]
+    aliases: [goat, goats, caprine]
   - id: pig
     name: Pig
-    aliases: [swine]
+    aliases: [pig, pigs, swine, hog, pork]
   - id: rabbit
     name: Rabbit
-    aliases: [domestic_rabbit]
+    aliases: [rabbit, rabbits, bunny, bunnies, domestic_rabbit]
   - id: chicken
     name: Chicken
-    aliases: [hen, rooster]
+    aliases: [chicken, chickens, hen, hens, rooster, roosters, poultry]
+  - id: turkey
+    name: Turkey
+    aliases: [turkey, turkeys]
+  - id: duck
+    name: Duck
+    aliases: [duck, ducks, duckling]
+  - id: goose
+    name: Goose
+    aliases: [goose, geese, gander]
+  - id: donkey
+    name: Donkey
+    aliases: [donkey, donkeys, ass, burro, jackass]
+  - id: peafowl
+    name: Peafowl
+    aliases: [peafowl, peacock, peahen, peachick]
+  - id: pigeon
+    name: Pigeon
+    aliases: [pigeon, pigeons, dove, doves]
+  - id: llama
+    name: Llama
+    aliases: [llama, llamas]
+  - id: alpaca
+    name: Alpaca
+    aliases: [alpaca, alpacas]
+  - id: dromedary
+    name: Dromedary
+    aliases: [dromedary, dromedaries, arabian_camel, camelus_dromedarius, single_hump_camel]
+  - id: bactrian_camel
+    name: Bactrian Camel
+    aliases: [bactrian, bactrian_camel, two_hump_camel, camelus_bactrianus]
+  - id: camel
+    name: Camel (generic)
+    aliases: [camel, camels, camelidae]
+    note: >
+      Generic label — use dromedary or bactrian_camel when species is known.
+  - id: water_buffalo
+    name: Water Buffalo
+    aliases: [water_buffalo, water_buffaloes, buffalo, buffaloes, bubalus_bubalis]
 
+# ─── BREEDS ───────────────────────────────────────────────────────────────────
 breeds:
+
+  # ── DOG ─────────────────────────────────────────────────────────────────────
+  # NOTE: trained classifier uses ImageNet-format IDs (n02XXXXXXX_breed_name).
+  # The label map normalises these to the canonical IDs below.
   dog:
+    - id: dog:afghan_hound
+      name: Afghan Hound
+      aliases: [afghan_hound, afghan]
+    - id: dog:airedale
+      name: Airedale Terrier
+      aliases: [airedale, airedale_terrier]
     - id: dog:affenpinscher
       name: Affenpinscher
       aliases: [affenpinscher]
+    - id: dog:basenji
+      name: Basenji
+      aliases: [basenji]
+    - id: dog:basset
+      name: Basset Hound
+      aliases: [basset, basset_hound]
     - id: dog:beagle
       name: Beagle
       aliases: [beagle]
+    - id: dog:bedlington_terrier
+      name: Bedlington Terrier
+      aliases: [bedlington_terrier, bedlington]
+    - id: dog:bernese_mountain
+      name: Bernese Mountain Dog
+      aliases: [bernese_mountain, bernese_mountain_dog, berner_sennenhund]
+    - id: dog:bloodhound
+      name: Bloodhound
+      aliases: [bloodhound]
+    - id: dog:border_collie
+      name: Border Collie
+      aliases: [border_collie]
+    - id: dog:border_terrier
+      name: Border Terrier
+      aliases: [border_terrier]
+    - id: dog:borzoi
+      name: Borzoi
+      aliases: [borzoi, russian_wolfhound]
+    - id: dog:boston_bull
+      name: Boston Terrier
+      aliases: [boston_bull, boston_terrier]
+    - id: dog:bouvier_des_flandres
+      name: Bouvier des Flandres
+      aliases: [bouvier_des_flandres, bouvier]
     - id: dog:boxer
       name: Boxer
       aliases: [boxer]
+    - id: dog:briard
+      name: Briard
+      aliases: [briard]
+    - id: dog:brittany_spaniel
+      name: Brittany Spaniel
+      aliases: [brittany_spaniel, brittany]
+    - id: dog:bull_mastiff
+      name: Bull Mastiff
+      aliases: [bull_mastiff, bullmastiff]
+    - id: dog:cairn
+      name: Cairn Terrier
+      aliases: [cairn, cairn_terrier]
     - id: dog:chihuahua
       name: Chihuahua
       aliases: [chihuahua]
+    - id: dog:chow
+      name: Chow Chow
+      aliases: [chow, chow_chow]
+    - id: dog:cocker_spaniel
+      name: Cocker Spaniel
+      aliases: [cocker_spaniel, american_cocker_spaniel]
+    - id: dog:collie
+      name: Collie
+      aliases: [collie, rough_collie]
+    - id: dog:doberman
+      name: Doberman Pinscher
+      aliases: [doberman, doberman_pinscher, dobermann]
+    - id: dog:english_setter
+      name: English Setter
+      aliases: [english_setter]
+    - id: dog:english_springer
+      name: English Springer Spaniel
+      aliases: [english_springer, english_springer_spaniel]
+    - id: dog:flat_coated_retriever
+      name: Flat-Coated Retriever
+      aliases: [flat_coated_retriever, flat_coated]
+    - id: dog:french_bulldog
+      name: French Bulldog
+      aliases: [french_bulldog, frenchie]
     - id: dog:german_shepherd
       name: German Shepherd
       aliases: [german_shepherd, german_shepherd_dog, alsatian]
+    - id: dog:german_short_haired_pointer
+      name: German Shorthaired Pointer
+      aliases: [german_short_haired_pointer, gsp]
     - id: dog:golden_retriever
       name: Golden Retriever
-      aliases: [golden_retriever]
+      aliases: [golden_retriever, golden]
+    - id: dog:gordon_setter
+      name: Gordon Setter
+      aliases: [gordon_setter]
+    - id: dog:great_dane
+      name: Great Dane
+      aliases: [great_dane]
+    - id: dog:great_pyrenees
+      name: Great Pyrenees
+      aliases: [great_pyrenees, pyrenean_mountain, patou]
+    - id: dog:groenendael
+      name: Belgian Shepherd Groenendael
+      aliases: [groenendael, belgian_shepherd]
+    - id: dog:ibizan_hound
+      name: Ibizan Hound
+      aliases: [ibizan_hound, ibizan]
+    - id: dog:irish_setter
+      name: Irish Setter
+      aliases: [irish_setter]
+    - id: dog:irish_terrier
+      name: Irish Terrier
+      aliases: [irish_terrier]
+    - id: dog:irish_wolfhound
+      name: Irish Wolfhound
+      aliases: [irish_wolfhound]
+    - id: dog:italian_greyhound
+      name: Italian Greyhound
+      aliases: [italian_greyhound]
+    - id: dog:kelpie
+      name: Australian Kelpie
+      aliases: [kelpie, australian_kelpie]
+    - id: dog:komondor
+      name: Komondor
+      aliases: [komondor]
+    - id: dog:kuvasz
+      name: Kuvasz
+      aliases: [kuvasz]
     - id: dog:labrador_retriever
       name: Labrador Retriever
       aliases: [labrador_retriever, labrador, lab]
-    - id: dog:poodle
-      name: Poodle
-      aliases: [poodle, standard_poodle, miniature_poodle, toy_poodle]
+    - id: dog:lakeland_terrier
+      name: Lakeland Terrier
+      aliases: [lakeland_terrier, lakeland]
+    - id: dog:leonberg
+      name: Leonberger
+      aliases: [leonberg, leonberger]
+    - id: dog:lhasa
+      name: Lhasa Apso
+      aliases: [lhasa, lhasa_apso]
+    - id: dog:malamute
+      name: Alaskan Malamute
+      aliases: [malamute, alaskan_malamute]
+    - id: dog:malinois
+      name: Belgian Malinois
+      aliases: [malinois, belgian_malinois]
+    - id: dog:maltese
+      name: Maltese
+      aliases: [maltese]
+    - id: dog:miniature_pinscher
+      name: Miniature Pinscher
+      aliases: [miniature_pinscher, min_pin]
+    - id: dog:miniature_poodle
+      name: Miniature Poodle
+      aliases: [miniature_poodle, mini_poodle]
+    - id: dog:miniature_schnauzer
+      name: Miniature Schnauzer
+      aliases: [miniature_schnauzer, mini_schnauzer]
+    - id: dog:newfoundland
+      name: Newfoundland
+      aliases: [newfoundland, newfie]
+    - id: dog:norwegian_elkhound
+      name: Norwegian Elkhound
+      aliases: [norwegian_elkhound]
+    - id: dog:norwich_terrier
+      name: Norwich Terrier
+      aliases: [norwich_terrier]
+    - id: dog:otterhound
+      name: Otterhound
+      aliases: [otterhound]
+    - id: dog:papillon
+      name: Papillon
+      aliases: [papillon]
+    - id: dog:pekinese
+      name: Pekingese
+      aliases: [pekinese, pekingese, peke]
+    - id: dog:pembroke
+      name: Pembroke Welsh Corgi
+      aliases: [pembroke, pembroke_corgi, welsh_corgi]
+    - id: dog:pomeranian
+      name: Pomeranian
+      aliases: [pomeranian, pom]
+    - id: dog:pug
+      name: Pug
+      aliases: [pug]
+    - id: dog:rhodesian_ridgeback
+      name: Rhodesian Ridgeback
+      aliases: [rhodesian_ridgeback, ridgeback]
+    - id: dog:rottweiler
+      name: Rottweiler
+      aliases: [rottweiler, rottie]
+    - id: dog:saint_bernard
+      name: Saint Bernard
+      aliases: [saint_bernard, st_bernard]
+    - id: dog:saluki
+      name: Saluki
+      aliases: [saluki, persian_greyhound]
+    - id: dog:samoyed
+      name: Samoyed
+      aliases: [samoyed, sammy]
+    - id: dog:schipperke
+      name: Schipperke
+      aliases: [schipperke]
+    - id: dog:scotch_terrier
+      name: Scottish Terrier
+      aliases: [scotch_terrier, scottish_terrier, scottie]
+    - id: dog:scottish_deerhound
+      name: Scottish Deerhound
+      aliases: [scottish_deerhound]
+    - id: dog:sealyham_terrier
+      name: Sealyham Terrier
+      aliases: [sealyham_terrier, sealyham]
+    - id: dog:shetland_sheepdog
+      name: Shetland Sheepdog
+      aliases: [shetland_sheepdog, sheltie]
+    - id: dog:shih_tzu
+      name: Shih Tzu
+      aliases: [shih_tzu]
+    - id: dog:siberian_husky
+      name: Siberian Husky
+      aliases: [siberian_husky, husky]
+    - id: dog:silky_terrier
+      name: Silky Terrier
+      aliases: [silky_terrier, australian_silky_terrier]
+    - id: dog:soft_coated_wheaten_terrier
+      name: Soft-Coated Wheaten Terrier
+      aliases: [soft_coated_wheaten_terrier, wheaten_terrier]
+    - id: dog:staffordshire_bullterrier
+      name: Staffordshire Bull Terrier
+      aliases: [staffordshire_bullterrier, staffy, staffordshire_bull_terrier]
+    - id: dog:standard_poodle
+      name: Standard Poodle
+      aliases: [standard_poodle, poodle]
+    - id: dog:standard_schnauzer
+      name: Standard Schnauzer
+      aliases: [standard_schnauzer, schnauzer]
+    - id: dog:tibetan_mastiff
+      name: Tibetan Mastiff
+      aliases: [tibetan_mastiff]
+    - id: dog:tibetan_terrier
+      name: Tibetan Terrier
+      aliases: [tibetan_terrier]
+    - id: dog:toy_poodle
+      name: Toy Poodle
+      aliases: [toy_poodle]
+    - id: dog:toy_terrier
+      name: Toy Terrier
+      aliases: [toy_terrier]
+    - id: dog:vizsla
+      name: Vizsla
+      aliases: [vizsla, hungarian_pointer]
+    - id: dog:weimaraner
+      name: Weimaraner
+      aliases: [weimaraner, grey_ghost]
+    - id: dog:welsh_springer_spaniel
+      name: Welsh Springer Spaniel
+      aliases: [welsh_springer_spaniel, welsh_springer]
+    - id: dog:west_highland_white_terrier
+      name: West Highland White Terrier
+      aliases: [west_highland_white_terrier, westie]
+    - id: dog:whippet
+      name: Whippet
+      aliases: [whippet]
+    - id: dog:wire_haired_fox_terrier
+      name: Wire-Haired Fox Terrier
+      aliases: [wire_haired_fox_terrier, wire_fox_terrier]
+    - id: dog:yorkshire_terrier
+      name: Yorkshire Terrier
+      aliases: [yorkshire_terrier, yorkie]
+
+  # ── CAT ─────────────────────────────────────────────────────────────────────
   cat:
     - id: cat:abyssinian
       name: Abyssinian
       aliases: [abyssinian]
+    - id: cat:american_bobtail
+      name: American Bobtail
+      aliases: [american_bobtail]
+    - id: cat:american_shorthair
+      name: American Shorthair
+      aliases: [american_shorthair, american_short, american_short_type]
+    - id: cat:balinese
+      name: Balinese
+      aliases: [balinese]
     - id: cat:bengal
       name: Bengal
       aliases: [bengal]
     - id: cat:birman
       name: Birman
-      aliases: [birman]
+      aliases: [birman, sacred_birman]
+    - id: cat:bombay
+      name: Bombay
+      aliases: [bombay]
+    - id: cat:british_shorthair
+      name: British Shorthair
+      aliases: [british_shorthair, british, british_type]
+    - id: cat:burmese
+      name: Burmese
+      aliases: [burmese]
+    - id: cat:canadian_hairless
+      name: Canadian Hairless (Sphynx)
+      aliases: [canadian_hairless, sphynx_hairless]
+    - id: cat:chartreux
+      name: Chartreux
+      aliases: [chartreux]
+    - id: cat:cornish_rex
+      name: Cornish Rex
+      aliases: [cornish_rex, rex]
+    - id: cat:devon_rex
+      name: Devon Rex
+      aliases: [devon_rex]
+    - id: cat:egyptian_mau
+      name: Egyptian Mau
+      aliases: [egyptian_mau]
+    - id: cat:exotic_shorthair
+      name: Exotic Shorthair
+      aliases: [exotic_shorthair]
+    - id: cat:himalayan
+      name: Himalayan
+      aliases: [himalayan, colourpoint_persian]
+    - id: cat:japanese_bobtail
+      name: Japanese Bobtail
+      aliases: [japanese_bobtail]
+    - id: cat:korat
+      name: Korat
+      aliases: [korat]
     - id: cat:maine_coon
       name: Maine Coon
-      aliases: [maine_coon]
+      aliases: [maine_coon, mainecoon]
+    - id: cat:manx
+      name: Manx
+      aliases: [manx]
+    - id: cat:munchkin
+      name: Munchkin
+      aliases: [munchkin]
+    - id: cat:norwegian_forest
+      name: Norwegian Forest Cat
+      aliases: [norwegian_forest, norwegian_forest_cat, skogkatt]
+    - id: cat:oriental
+      name: Oriental
+      aliases: [oriental, oriental_short_hair, oriental_long_hair, oriental_tabby]
     - id: cat:persian
       name: Persian
       aliases: [persian]
+    - id: cat:ragamuffin
+      name: Ragamuffin
+      aliases: [ragamuffin]
     - id: cat:ragdoll
       name: Ragdoll
       aliases: [ragdoll]
+    - id: cat:russian_blue
+      name: Russian Blue
+      aliases: [russian_blue]
+    - id: cat:scottish_fold
+      name: Scottish Fold
+      aliases: [scottish_fold]
     - id: cat:siamese
       name: Siamese
-      aliases: [siamese]
+      aliases: [siamese, siamese_type, applehead_siamese]
+    - id: cat:siberian
+      name: Siberian
+      aliases: [siberian]
+    - id: cat:singapura
+      name: Singapura
+      aliases: [singapura]
+    - id: cat:snowshoe
+      name: Snowshoe
+      aliases: [snowshoe]
+    - id: cat:somali
+      name: Somali
+      aliases: [somali]
     - id: cat:sphynx
       name: Sphynx
       aliases: [sphynx]
+    - id: cat:tonkinese
+      name: Tonkinese
+      aliases: [tonkinese]
+    - id: cat:turkish_angora
+      name: Turkish Angora
+      aliases: [turkish_angora]
+    - id: cat:turkish_van
+      name: Turkish Van
+      aliases: [turkish_van]
+
+  # ── CATTLE ──────────────────────────────────────────────────────────────────
+  # NOTE: trained classifier contains ~29 numeric IDs (cattle:1 … cattle:48)
+  # from an unresolved source dataset. These are NOT valid breed IDs; they
+  # were ingested when that dataset's labels could not be normalised.
   cattle:
     - id: cattle:angus
       name: Angus
-      aliases: [angus, aberdeen_angus]
+      aliases: [angus, aberdeen_angus, american_angus, red_angus]
+    - id: cattle:ayrshire
+      name: Ayrshire
+      aliases: [ayrshire]
+    - id: cattle:belgian_blue
+      name: Belgian Blue
+      aliases: [belgian_blue]
     - id: cattle:brahman
       name: Brahman
       aliases: [brahman]
+    - id: cattle:brown_swiss
+      name: Brown Swiss
+      aliases: [brown_swiss]
+    - id: cattle:charolais
+      name: Charolais
+      aliases: [charolais]
+    - id: cattle:dexter
+      name: Dexter
+      aliases: [dexter]
+    - id: cattle:gir
+      name: Gir
+      aliases: [gir]
+    - id: cattle:guernsey
+      name: Guernsey
+      aliases: [guernsey]
     - id: cattle:hereford
       name: Hereford
-      aliases: [hereford]
+      aliases: [hereford, polled_hereford]
+    - id: cattle:highland
+      name: Highland
+      aliases: [highland, scottish_highland]
     - id: cattle:holstein_friesian
       name: Holstein Friesian
-      aliases: [holstein, friesian, holstein_friesian]
+      aliases: [holstein_friesian, holstein, holstain_friesian, fresian, friesian_cattle, prim_holstein]
+      # NOTE: "friesian" alone is NOT an alias here — it collides with horse:friesian.
+      # Use "friesian_cattle" or "holstein_friesian" to be unambiguous.
+    - id: cattle:jersey
+      name: Jersey
+      aliases: [jersey]
+    - id: cattle:limousin
+      name: Limousin
+      aliases: [limousin]
+    - id: cattle:longhorn
+      name: Longhorn
+      aliases: [longhorn, texas_longhorn]
+    - id: cattle:montbeliarde
+      name: Montbéliarde
+      aliases: [montbeliarde]
+    - id: cattle:murray_grey
+      name: Murray Grey
+      aliases: [murray_grey]
+    - id: cattle:nelore
+      name: Nellore
+      aliases: [nelore, nellore]
+    - id: cattle:normande
+      name: Normande
+      aliases: [normande]
+    - id: cattle:sahiwal
+      name: Sahiwal
+      aliases: [sahiwal]
+    - id: cattle:simmental
+      name: Simmental
+      aliases: [simmental]
+    - id: cattle:watusi
+      name: Watusi / Ankole
+      aliases: [watusi, ankole, ankole_watusi]
+
+  # ── HORSE ───────────────────────────────────────────────────────────────────
   horse:
+    - id: horse:akhal_teke
+      name: Akhal-Teke
+      aliases: [akhal_teke]
+    - id: horse:appaloosa
+      name: Appaloosa
+      aliases: [appaloosa]
     - id: horse:arabian
       name: Arabian
-      aliases: [arabian, arabian_horse]
+      aliases: [arabian, arabian_horse, arab]
+    - id: horse:ardennais
+      name: Ardennais
+      aliases: [ardennais]
+    - id: horse:camargue
+      name: Camargue
+      aliases: [camargue]
+    - id: horse:clydesdale
+      name: Clydesdale
+      aliases: [clydesdale]
+    - id: horse:connemara_pony
+      name: Connemara Pony
+      aliases: [connemara_pony, connemara]
+    - id: horse:dutch_warmblood
+      name: Dutch Warmblood (KWPN)
+      aliases: [kwpn, dutch_warmblood]
+    - id: horse:fjord
+      name: Norwegian Fjord
+      aliases: [norwegian_fjord, fjord, fjord_horse]
     - id: horse:friesian
       name: Friesian
-      aliases: [friesian_horse, friesian]
+      aliases: [friesian, friesian_horse, friesian_horse]
+      # NOTE: use "friesian_horse" or "friesian" for this breed.
+      # Do NOT use bare "friesian" in datasets that also contain cattle — it
+      # will collide with holstein_friesian. The label map resolves context.
+    - id: horse:gypsy
+      name: Gypsy Vanner
+      aliases: [gypsy, gypsy_vanner, gypsy_horse]
+    - id: horse:haflinger
+      name: Haflinger
+      aliases: [haflinger]
+    - id: horse:hannover
+      name: Hanoverian
+      aliases: [hannoverian, hanoverian]
+    - id: horse:icelandic
+      name: Icelandic Horse
+      aliases: [icelandic, icelandic_horse]
+    - id: horse:lipizzaner
+      name: Lipizzaner
+      aliases: [lipizzaner, lipizzan]
+    - id: horse:lusitano
+      name: Lusitano
+      aliases: [lusitano]
+    - id: horse:morgan
+      name: Morgan
+      aliases: [morgan]
+    - id: horse:mustang
+      name: Mustang
+      aliases: [mustang, kiger_mustang, american_mustang]
+    - id: horse:paint
+      name: American Paint Horse
+      aliases: [paint, paint_horse]
+    - id: horse:paso_fino
+      name: Paso Fino
+      aliases: [paso_fino]
+    - id: horse:percheron
+      name: Percheron
+      aliases: [percheron]
     - id: horse:quarter_horse
       name: Quarter Horse
-      aliases: [quarter_horse]
+      aliases: [quarter_horse, american_quarter_horse, quarter]
+    - id: horse:shetland_pony
+      name: Shetland Pony
+      aliases: [shetland_pony]
+    - id: horse:shire
+      name: Shire
+      aliases: [shire, shire_horse]
     - id: horse:thoroughbred
       name: Thoroughbred
       aliases: [thoroughbred]
+    - id: horse:trakehner
+      name: Trakehner
+      aliases: [trakehner]
+    - id: horse:warmblood
+      name: Warmblood (generic)
+      aliases: [warmblood, czech_warmblood, swedish_warmblood, american_warmblood]
+
+  # ── SHEEP ───────────────────────────────────────────────────────────────────
+  # NOTE: trained classifier contains sheep:goat (wrong species — mislabelled
+  # training samples) and sheep:uav (aerial dataset artefact). Both are junk
+  # labels and excluded here.
+  # Also: sheep:marino is a typo for sheep:merino; sheep:harri is sheep:harry;
+  # poll_dorset / polled_dorset are duplicates (polled_dorset is canonical).
   sheep:
+    - id: sheep:awassi
+      name: Awassi
+      aliases: [awassi]
+    - id: sheep:barbados_blackbelly
+      name: Barbados Blackbelly
+      aliases: [barbados_blackbelly]
+    - id: sheep:bluefaced_leicester
+      name: Bluefaced Leicester
+      aliases: [bluefaced_leicester]
+    - id: sheep:border_leicester
+      name: Border Leicester
+      aliases: [border_leicester]
+    - id: sheep:corriedale
+      name: Corriedale
+      aliases: [corriedale, north_bulgarian_corriedale, south_bulgarian_corriedale]
     - id: sheep:dorper
       name: Dorper
       aliases: [dorper]
+    - id: sheep:dorset
+      name: Dorset
+      aliases: [dorset_horn, dorset_down, polled_dorset, poll_dorset, horn_dorset]
+    - id: sheep:finnsheep
+      name: Finnsheep (Finnsheep)
+      aliases: [finnsheep, finnish_landrace]
+    - id: sheep:hampshire
+      name: Hampshire Down
+      aliases: [hampshire_down, hampshire]
+    - id: sheep:herdwick
+      name: Herdwick
+      aliases: [herdwick]
+    - id: sheep:icelandic
+      name: Icelandic
+      aliases: [icelandic]
+    - id: sheep:ile_de_france
+      name: Île-de-France
+      aliases: [ile_de_france]
+    - id: sheep:jacob
+      name: Jacob
+      aliases: [jacob]
+    - id: sheep:katahdin
+      name: Katahdin
+      aliases: [katahdin]
+    - id: sheep:lacaune
+      name: Lacaune
+      aliases: [lacaune]
+    - id: sheep:lincolnshire
+      name: Lincolnshire / Lincoln Longwool
+      aliases: [lincoln, lincoln_longwool]
     - id: sheep:merino
       name: Merino
-      aliases: [merino]
+      aliases: [merino, merinos, marino, american_merino, australian_merino, rambouillet]
+      # "marino" is a common typo → merged here
+    - id: sheep:oxford_down
+      name: Oxford Down
+      aliases: [oxford_down]
+    - id: sheep:romanov
+      name: Romanov
+      aliases: [romanov]
+    - id: sheep:romney
+      name: Romney / New Zealand Romney
+      aliases: [romney, new_zealand_romney]
+    - id: sheep:scottish_blackface
+      name: Scottish Blackface
+      aliases: [scottish_blackface]
+    - id: sheep:shetland
+      name: Shetland
+      aliases: [shetland]
+    - id: sheep:shropshire
+      name: Shropshire
+      aliases: [shropshire]
+    - id: sheep:soay
+      name: Soay
+      aliases: [soay]
+    - id: sheep:southdown
+      name: Southdown
+      aliases: [southdown]
     - id: sheep:suffolk
       name: Suffolk
       aliases: [suffolk]
+    - id: sheep:texel
+      name: Texel
+      aliases: [texel, blue_texel]
+
+  # ── GOAT ────────────────────────────────────────────────────────────────────
+  # NOTE: trained classifier contains 9 numeric IDs (goat:13_22, goat:2_20 …)
+  # from unresolved goat-detector dataset labels. These are NOT valid breed IDs.
   goat:
     - id: goat:alpine
       name: Alpine
-      aliases: [alpine]
+      aliases: [alpine, french_alpine, american_lamancha]
+    - id: goat:anglo_nubian
+      name: Anglo-Nubian / Nubian
+      aliases: [anglo_nubian, nubian]
     - id: goat:boer
       name: Boer
-      aliases: [boer]
+      aliases: [boer, boer_goat, kalahari_red]
+    - id: goat:changthangi
+      name: Changthangi (Pashmina)
+      aliases: [changthangi, pashmina]
+    - id: goat:kamori
+      name: Kamori
+      aliases: [kamori]
+    - id: goat:nigerian_dwarf
+      name: Nigerian Dwarf
+      aliases: [nigerian_dwarf, pygmy]
+    - id: goat:oberhasli
+      name: Oberhasli
+      aliases: [oberhasli]
     - id: goat:saanen
       name: Saanen
       aliases: [saanen]
+    - id: goat:sirohi
+      name: Sirohi
+      aliases: [sirohi]
+    - id: goat:toggenburg
+      name: Toggenburg
+      aliases: [toggenburger, toggenburg]
+
+  # ── PIG ─────────────────────────────────────────────────────────────────────
   pig:
+    - id: pig:american_yorkshire
+      name: American Yorkshire (Large White)
+      aliases: [american_yorkshire, yorkshire, large_white]
+    - id: pig:berkshire
+      name: Berkshire
+      aliases: [berkshire]
     - id: pig:duroc
       name: Duroc
       aliases: [duroc]
-    - id: pig:large_white
-      name: Large White
-      aliases: [large_white, yorkshire]
+    - id: pig:hampshire
+      name: Hampshire
+      aliases: [hampshire_pig]
+    - id: pig:landrace
+      name: Landrace
+      aliases: [landrace]
+    - id: pig:oxford_sandy_and_black
+      name: Oxford Sandy and Black
+      aliases: [oxford_sandy_and_black]
+    - id: pig:pietrain
+      name: Pietrain
+      aliases: [pietrain]
+    - id: pig:pot_bellied
+      name: Pot-bellied Pig
+      aliases: [pot_bellied, potbelly, mini_pig]
+    - id: pig:schwabisch_hall
+      name: Schwäbisch-Hällisches Landschwein
+      aliases: [schwabisch_hallisches_landschwein, schwabisch_hall]
+
+  # ── RABBIT ──────────────────────────────────────────────────────────────────
   rabbit:
+    - id: rabbit:angora
+      name: Angora
+      aliases: [angora, english_angora, french_angora]
+    - id: rabbit:californian
+      name: Californian
+      aliases: [californian]
+    - id: rabbit:checkered_giant
+      name: Checkered Giant
+      aliases: [checkered_giant]
+    - id: rabbit:dutch
+      name: Dutch
+      aliases: [dutch]
+    - id: rabbit:english_lop
+      name: English Lop
+      aliases: [english_lop]
+    - id: rabbit:english_spot
+      name: English Spot
+      aliases: [english_spot]
     - id: rabbit:holland_lop
       name: Holland Lop
       aliases: [holland_lop]
+    - id: rabbit:jersey_wooly
+      name: Jersey Wooly
+      aliases: [jersey_wooly]
+    - id: rabbit:lionhead
+      name: Lionhead
+      aliases: [lionhead]
+    - id: rabbit:mini_lop
+      name: Mini Lop
+      aliases: [mini_lop, mini_lion_lop]
     - id: rabbit:netherland_dwarf
       name: Netherland Dwarf
       aliases: [netherland_dwarf]
+    - id: rabbit:new_zealand
+      name: New Zealand
+      aliases: [new_zealand]
+    - id: rabbit:rex
+      name: Rex
+      aliases: [rex]
+
+  # ── CHICKEN ─────────────────────────────────────────────────────────────────
+  # "rir" is an alias for rhode_island_red (duplicate in trained model).
+  # "pekin" in this context is a bantam chicken breed (not the duck).
+  # "chicken:chicken" generic label excluded.
   chicken:
+    - id: chicken:australorp
+      name: Australorp
+      aliases: [australorp]
+    - id: chicken:barnevelder
+      name: Barnevelder
+      aliases: [barnevelder]
+    - id: chicken:bielefelder
+      name: Bielefelder
+      aliases: [bielefelder, bielefelder_kennhuhn]
+    - id: chicken:brahma
+      name: Brahma
+      aliases: [brahma, brahma_bantam]
+    - id: chicken:buckeye
+      name: Buckeye
+      aliases: [buckeye]
+    - id: chicken:cochin
+      name: Cochin
+      aliases: [cochin, cochin_bantam]
+    - id: chicken:delaware
+      name: Delaware
+      aliases: [delaware]
+    - id: chicken:dominique
+      name: Dominique
+      aliases: [dominique]
+    - id: chicken:dorking
+      name: Dorking
+      aliases: [dorking]
+    - id: chicken:faverolles
+      name: Faverolles
+      aliases: [faverolles, salmon_faverolles]
+    - id: chicken:golden_comet
+      name: Golden Comet
+      aliases: [golden_comet]
+    - id: chicken:hamburg
+      name: Hamburg
+      aliases: [hamburg]
+    - id: chicken:jersey_giant
+      name: Jersey Giant
+      aliases: [jersey_giant]
     - id: chicken:leghorn
       name: Leghorn
       aliases: [leghorn]
+    - id: chicken:lohmann
+      name: Lohmann (Brown)
+      aliases: [lohmann, lohmann_brown]
+    - id: chicken:marans
+      name: Marans
+      aliases: [marans]
+    - id: chicken:new_hampshire
+      name: New Hampshire Red
+      aliases: [new_hampshire, newhampshire]
+      # "newhampshire" is the typo spelling found in training data
+    - id: chicken:orpington
+      name: Orpington
+      aliases: [orpington, buff_oprington, black_orpington, blackorpington]
+      # "buff_oprington" is a typo in training data
+    - id: chicken:pekin_bantam
+      name: Pekin Bantam
+      aliases: [pekin]
+      # NOTE: "pekin" is a Pekin Bantam chicken breed, NOT the Pekin duck.
+      # Ensure context (species=chicken) is known before applying this alias.
+    - id: chicken:plymouth_rock
+      name: Plymouth Rock
+      aliases: [plymouth_rock, plymouthrock, blue_plymouthrock]
     - id: chicken:rhode_island_red
       name: Rhode Island Red
-      aliases: [rhode_island_red]
+      aliases: [rhode_island_red, rir]
+    - id: chicken:silkie
+      name: Silkie
+      aliases: [silkie]
+    - id: chicken:sussex
+      name: Sussex
+      aliases: [sussex, light_sussex, speckled_sussex]
+    - id: chicken:welsumer
+      name: Welsummer
+      aliases: [welsumer, welsummer, welsumer_bantam]
+    - id: chicken:wyandotte
+      name: Wyandotte
+      aliases: [wyandotte]
 
+  # ── DUCK ────────────────────────────────────────────────────────────────────
+  duck:
+    - id: duck:american_pekin
+      name: American Pekin
+      aliases: [american_pekin, pekin_duck]
+      # NOTE: do NOT use bare "pekin" — it collides with the Pekin Bantam chicken.
+    - id: duck:aylesbury
+      name: Aylesbury
+      aliases: [aylesbury]
+    - id: duck:black_east_indian
+      name: Black East Indian
+      aliases: [black_east_indian]
+    - id: duck:call
+      name: Call Duck
+      aliases: [call, call_duck]
+    - id: duck:campbell
+      name: Khaki Campbell
+      aliases: [campbell, khaki_campbell]
+    - id: duck:cayuga
+      name: Cayuga
+      aliases: [cayuga]
+    - id: duck:crested
+      name: Crested Duck
+      aliases: [crested]
+    - id: duck:indian_runner
+      name: Indian Runner
+      aliases: [indian_runner, runner]
+    - id: duck:muscovy
+      name: Muscovy
+      aliases: [muscovy, muscovy_domesticated]
+    - id: duck:rouen
+      name: Rouen
+      aliases: [rouen]
+    - id: duck:saxony
+      name: Saxony
+      aliases: [saxony]
+    - id: duck:silver_appleyard
+      name: Silver Appleyard
+      aliases: [silver_appleyard]
+    - id: duck:swedish
+      name: Swedish Duck (Blue Swedish)
+      aliases: [swedish, blue_swedish]
+    - id: duck:welsh_harlequin
+      name: Welsh Harlequin
+      aliases: [welsh_harlequin]
+
+  # ── GOOSE ───────────────────────────────────────────────────────────────────
+  # "norwegian_whith" is a typo for "norwegian_white" — merged.
+  goose:
+    - id: goose:african
+      name: African Goose
+      aliases: [african]
+    - id: goose:american_buff
+      name: American Buff
+      aliases: [american_buff]
+    - id: goose:chinese
+      name: Chinese Goose
+      aliases: [chinese]
+    - id: goose:embden
+      name: Embden
+      aliases: [embden]
+    - id: goose:greylag
+      name: Greylag
+      aliases: [greylag]
+    - id: goose:norwegian_white
+      name: Norwegian White
+      aliases: [norwegian_white, norwegian_whith]
+      # "norwegian_whith" is a typo in training data
+    - id: goose:pilgrim
+      name: Pilgrim
+      aliases: [pilgrim]
+    - id: goose:pomeranian
+      name: Pomeranian Goose
+      aliases: [pomeranian_goose]
+    - id: goose:sebastopol
+      name: Sebastopol
+      aliases: [sebastopol]
+    - id: goose:toulouse
+      name: Toulouse
+      aliases: [toulouse]
+    - id: goose:tufted_roman
+      name: Tufted Roman
+      aliases: [roman, tufted_roman]
+
+  # ── DONKEY ──────────────────────────────────────────────────────────────────
+  # Removed: "donkey_kong_character" (video-game character erroneously in data)
+  # Removed: "zebra_donkey" (zedonk hybrid, not a domestic breed)
+  # Fixed: "th_c3_bcringer_waldesel" → thuringer_waldesel (encoding artefact)
+  donkey:
+    - id: donkey:asinara
+      name: Asinara Donkey
+      aliases: [asinara_donkey, asinara]
+    - id: donkey:asino_grigio_siciliano
+      name: Asino Grigio Siciliano
+      aliases: [asino_grigio_siciliano]
+    - id: donkey:asino_sardo
+      name: Asino Sardo
+      aliases: [asino_sardo]
+    - id: donkey:baudet_du_poitou
+      name: Baudet du Poitou (Poitevin)
+      aliases: [baudet_du_poitou, poitevin_donkey]
+    - id: donkey:grand_noir_du_berry
+      name: Grand Noir du Berry
+      aliases: [grand_noir_du_berry_donkey, grand_noir_du_berry]
+    - id: donkey:majorera
+      name: Majorera
+      aliases: [majorera_donkey, majorera]
+    - id: donkey:miniature
+      name: Miniature Donkey
+      aliases: [miniature_donkeys, miniature_donkey]
+    - id: donkey:miranda
+      name: Miranda
+      aliases: [miranda, miranda_donkey]
+    - id: donkey:pantesco
+      name: Pantesco
+      aliases: [pantesco]
+    - id: donkey:provence
+      name: Provence Donkey
+      aliases: [provence_donkey]
+    - id: donkey:pyrenean
+      name: Pyrenean Donkey
+      aliases: [pyrenean_donkey]
+    - id: donkey:thuringer_waldesel
+      name: Thüringer Waldesel
+      aliases: [thuringer_waldesel, th_c3_bcringer_waldesel]
+      # "th_c3_bcringer_waldesel" is a UTF-8 encoding artefact for "Thüringer"
+
+  # ── PEAFOWL ─────────────────────────────────────────────────────────────────
+  peafowl:
+    - id: peafowl:indian_blue
+      name: Indian Blue Peafowl
+      aliases: [pavo_cristatus, indian_blue, indian_peafowl]
+    - id: peafowl:white
+      name: White Peafowl
+      aliases: [pavo_cristatus_mut_alba, white_peafowl]
+    - id: peafowl:black_shouldered
+      name: Black-shouldered Peafowl
+      aliases: [pavo_cristatus_mut_nigripennis, black_shouldered]
+    - id: peafowl:pied
+      name: Pied Peafowl
+      aliases: [pavo_cristatus_mut_pied, pied]
+    - id: peafowl:green
+      name: Green Peafowl (Javanese)
+      aliases: [pavo_muticus, green_peafowl, javanese_peafowl]
+    - id: peafowl:congo
+      name: Congo Peafowl
+      aliases: [afropavo_congensis, congo_peafowl]
+      # NOTE: Congo peafowl is a distinct African species, not a domestic breed.
+      # Included because training data contains it (from wild-animal image sets).
+
+  # ── PIGEON ──────────────────────────────────────────────────────────────────
+  # "plumpigeon" and bare "pigeon" are raw dataset artefacts, not breeds.
+  pigeon:
+    - id: pigeon:fantail
+      name: Fantail
+      aliases: [fantail, indian_fantail]
+    - id: pigeon:homer
+      name: Racing Homer
+      aliases: [giant_homer, show_pen_homer, american_show_homer, american_show_racer]
+    - id: pigeon:jacobin
+      name: Jacobin
+      aliases: [jacobin]
+    - id: pigeon:king
+      name: King Pigeon
+      aliases: [king]
+    - id: pigeon:modena
+      name: Modena
+      aliases: [modena, german_modena, triganino_modena]
+    - id: pigeon:nun
+      name: Nun
+      aliases: [nun, german_nun]
+    - id: pigeon:oriental_frill
+      name: Oriental Frill
+      aliases: [oriental_frill]
+    - id: pigeon:roller
+      name: Roller / Tumbler
+      aliases: [birmingham_roller, oriental_roller, persian_roller]
+    - id: pigeon:tippler
+      name: Tippler
+      aliases: [tippler]
+    - id: pigeon:tumbler
+      name: Tumbler (generic)
+      aliases: [german_long_faced_tumbler, english_long_faced_tumbler,
+                english_short_faced_tumbler, berlin_long_faced_tumbler,
+                old_dutch_tumbler, danish_tumbler, french_tumbler]
+
+  # ── DROMEDARY ───────────────────────────────────────────────────────────────
+  # NOTE: trained classifier uses color descriptions (black, white, yellowish,
+  # reddish_brown) inherited from the Roboflow camel dataset that labelled
+  # animals by coat colour, not breed. These are mapped as color aliases rather
+  # than true breeds.
+  dromedary:
+    - id: dromedary:majaheem
+      name: Majaheem
+      aliases: [majaheem]
+    - id: dromedary:shaele
+      name: Sha'ele
+      aliases: [shaele]
+    - id: dromedary:sofor
+      name: Sofor
+      aliases: [sofor]
+    - id: dromedary:waddah
+      name: Waddah
+      aliases: [waddah]
+    - id: dromedary:homor
+      name: Homor
+      aliases: [homor]
+    # Color-based labels from training data (not true breed names):
+    - id: dromedary:color_black
+      name: Black-coated Dromedary (color label)
+      aliases: [black]
+    - id: dromedary:color_white
+      name: White-coated Dromedary (color label)
+      aliases: [white]
+    - id: dromedary:color_yellowish
+      name: Yellowish-coated Dromedary (color label)
+      aliases: [yellowish]
+    - id: dromedary:color_reddish_brown
+      name: Reddish-brown-coated Dromedary (color label)
+      aliases: [reddish_brown]
+
+  # ── TURKEY ──────────────────────────────────────────────────────────────────
+  # No breed classifier trained yet. Taxonomy present for completeness.
+  turkey:
+    - id: turkey:broad_breasted_white
+      name: Broad Breasted White
+      aliases: [broad_breasted_white, commercial_white]
+    - id: turkey:bronze
+      name: Bronze Turkey
+      aliases: [bronze, broad_breasted_bronze]
+    - id: turkey:bourbon_red
+      name: Bourbon Red
+      aliases: [bourbon_red]
+    - id: turkey:narragansett
+      name: Narragansett
+      aliases: [narragansett]
+    - id: turkey:royal_palm
+      name: Royal Palm
+      aliases: [royal_palm]
+    - id: turkey:slate
+      name: Slate Turkey
+      aliases: [slate, lavender]
+
+  # ── LLAMA ───────────────────────────────────────────────────────────────────
+  # No breed classifier trained yet.
+  llama:
+    - id: llama:classic
+      name: Classic (Wooly) Llama
+      aliases: [classic, wooly]
+    - id: llama:suri
+      name: Suri Llama
+      aliases: [suri_llama]
+
+  # ── ALPACA ──────────────────────────────────────────────────────────────────
+  # No breed classifier trained yet.
+  alpaca:
+    - id: alpaca:huacaya
+      name: Huacaya Alpaca
+      aliases: [huacaya]
+    - id: alpaca:suri
+      name: Suri Alpaca
+      aliases: [suri, suri_alpaca]
+
+  # ── BACTRIAN CAMEL ──────────────────────────────────────────────────────────
+  # No breed classifier trained yet.
+  bactrian_camel:
+    - id: bactrian_camel:mongolian
+      name: Mongolian Bactrian Camel
+      aliases: [mongolian_bactrian, mongolian]
+    - id: bactrian_camel:wild
+      name: Wild Bactrian Camel
+      aliases: [wild_bactrian, camelus_ferus]
+
+  # ── WATER BUFFALO ───────────────────────────────────────────────────────────
+  # No breed classifier trained yet.
+  water_buffalo:
+    - id: water_buffalo:murrah
+      name: Murrah
+      aliases: [murrah]
+    - id: water_buffalo:carabao
+      name: Carabao
+      aliases: [carabao]
+    - id: water_buffalo:nili_ravi
+      name: Nili-Ravi
+      aliases: [nili_ravi]

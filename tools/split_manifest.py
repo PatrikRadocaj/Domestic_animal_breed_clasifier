@@ -1,13 +1,16 @@
-"""Wrapper for editable/local execution of manifest splitting."""
+﻿"""Wrapper for editable/local execution of manifest splitting."""
 
 from pathlib import Path
 import sys
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+repo_root = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(repo_root))
+sys.path.insert(0, str(repo_root / "src"))
 
 from animal_breed.data.splitting import main
 
 
 if __name__ == "__main__":
     main()
+
 

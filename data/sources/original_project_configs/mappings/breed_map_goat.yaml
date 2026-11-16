@@ -1,0 +1,9 @@
+# Add dataset-specific synonym mappings here as needed.
+# keys and values should be canonical snake_case labels.
+a_ardy: a_ardy
+goat: unknown
+
+# Wikimedia cleanup aliases
+unknown: unknown
+crossbred: unknown
+american_pygmy: pygmy

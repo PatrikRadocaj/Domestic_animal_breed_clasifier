@@ -8,6 +8,8 @@ For detection-capable sources, bbox columns store the visible animal box in abso
 | image_id | Stable deterministic image/instance id. |
 | path | Local image path. |
 | source | Dataset/source identifier. |
+| source_url | Optional source dataset URL for provenance. |
+| source_type | Optional source channel (e.g. kaggle, roboflow, wikimedia). |
 | license | Source license or `unknown`. |
 | species_id | Canonical taxonomy species id. |
 | breed_id | Canonical taxonomy breed id using `<species>:<breed>`. |

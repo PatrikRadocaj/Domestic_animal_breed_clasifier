@@ -1,0 +1,11 @@
+# Add dataset-specific synonym mappings here as needed.
+# keys and values should be canonical snake_case labels.
+pekin: pekin
+duck: unknown
+
+# Wikimedia cleanup aliases
+american_pekin: pekin
+german_pekin: pekin
+philippine_pekin: pekin
+mulard: unknown
+unknown: unknown

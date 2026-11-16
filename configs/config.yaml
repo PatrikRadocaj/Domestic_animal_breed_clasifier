@@ -5,6 +5,7 @@ defaults:
   - train: default
   - eval: default
   - experiment: local
+  - runtime: full_train
   - _self_
 
 project_name: animal-breed-detection
@@ -15,6 +16,7 @@ paths:
   repo_root: ${oc.env:PWD,.}
   results_dir: results
   experiments_dir: experiments
+  artifacts_dir: artifacts
 
 logging:
   level: INFO

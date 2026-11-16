@@ -1,0 +1,4 @@
+﻿name: server_gpu
+notes: "Dedicated server profile for long jobs."
+run_group: server
+save_code: true

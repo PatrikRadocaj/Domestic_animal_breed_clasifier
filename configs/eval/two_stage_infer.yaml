@@ -1,0 +1,7 @@
+﻿name: two_stage_inference
+source_path: data/samples
+output_json_path: results/two_stage_predictions.json
+
+detector_weights_path: runs/detect/train/weights/best.pt
+species_model_path: experiments/checkpoints/hierarchical/species/best.pt
+breed_models_dir: experiments/checkpoints/hierarchical/breed

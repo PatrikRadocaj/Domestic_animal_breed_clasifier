@@ -1,0 +1,8 @@
+# Add dataset-specific synonym mappings here as needed.
+# keys and values should be canonical snake_case labels.
+modena: modena
+
+# Wikimedia cleanup aliases
+modena_2: modena
+unidentified_pigeon_breeds: unknown
+unknown: unknown

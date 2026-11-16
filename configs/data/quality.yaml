@@ -1,0 +1,10 @@
+﻿enabled: true
+strictness: benchmark
+fail_on_warnings: false
+split_column: split
+source_column: source
+max_bbox_aspect: 12.0
+dedup:
+  enabled: true
+  near_enabled: true
+  max_images: 3000

@@ -1,0 +1,218 @@
+:root {
+  --bg: #f1ecdf;
+  --panel: #fff8ea;
+  --line: #d7c5a0;
+  --ink: #2d2417;
+  --accent: #c65a1e;
+  --accent-soft: #f5d7c4;
+  --good: #2f7f4f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, #fff9ef 0, #f5ebd7 40%, #e8ddc7 100%);
+  font-family: Georgia, "Palatino Linotype", serif;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 320px 1fr 340px;
+  min-height: 100vh;
+}
+
+.left-panel,
+.right-panel {
+  background: rgba(255, 248, 234, 0.92);
+  border-right: 1px solid var(--line);
+  padding: 16px;
+  overflow: auto;
+}
+
+.right-panel {
+  border-right: 0;
+  border-left: 1px solid var(--line);
+}
+
+.canvas-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 248, 234, 0.85);
+}
+
+button,
+select,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 1px solid var(--ink);
+  background: var(--panel);
+  color: var(--ink);
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-soft);
+}
+
+.canvas-wrap {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  position: relative;
+  overflow: auto;
+  min-height: 480px;
+  background: rgba(17, 17, 17, 0.06);
+}
+
+.canvas-stage {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+  line-height: 0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+#reviewImage,
+#reviewCanvas {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 90px);
+}
+
+#reviewImage {
+  border: 2px solid var(--ink);
+  background: #111;
+}
+
+#reviewCanvas {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+
+.canvas-message {
+  position: absolute;
+  inset: auto 32px 32px 32px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(17, 17, 17, 0.78);
+  color: #f8f0de;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+
+.canvas-message.visible {
+  opacity: 1;
+}
+
+.panel-header h1,
+.panel-header h2 {
+  margin: 0 0 4px;
+  font-size: 1.4rem;
+}
+
+.panel-header p {
+  margin: 0 0 12px;
+  font-size: 0.92rem;
+}
+
+.filters,
+.review-form {
+  display: grid;
+  gap: 12px;
+}
+
+.filters label,
+.review-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.92rem;
+}
+
+.record-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.record-card {
+  border: 1px solid var(--line);
+  background: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.record-card.active {
+  outline: 2px solid var(--accent);
+  background: #fff2e9;
+}
+
+.record-card .topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.meta-block {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 0.92rem;
+}
+
+.box-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.save-status {
+  min-height: 1.2em;
+  color: var(--good);
+}
+
+@media (max-width: 1100px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .left-panel,
+  .right-panel {
+    border: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .canvas-wrap {
+    min-height: 340px;
+  }
+
+  #reviewCanvas {
+    max-height: 60vh;
+  }
+}

@@ -1,0 +1,68 @@
+# Canonical turkey breeds used in this project + common aliases.
+
+# bourbon_red
+bourbon_red: bourbon_red
+bourbon_red_turkey: bourbon_red
+
+# broad_breasted_white
+broad_breasted_white: broad_breasted_white
+broadbreasted_white: broad_breasted_white
+broad_breasted_white_turkey: broad_breasted_white
+white_broad_breasted: broad_breasted_white
+white_broadbreasted: broad_breasted_white
+
+# bronzepute (merge standard/broad-breasted bronze variants)
+bronzepute: bronzepute
+bronze: bronzepute
+standard_bronze: bronzepute
+broad_breasted_bronze: bronzepute
+broadbreasted_bronze: bronzepute
+bronze_standard_or_unimproved: bronzepute
+
+# crollwitzer
+crollwitzer: crollwitzer
+crollweitzer: crollwitzer
+crollwitzer_pute: crollwitzer
+crollweitzer_turkey: crollwitzer
+
+# czech
+czech: czech
+czech_turkey: czech
+
+# de_ronquier
+de_ronquier: de_ronquier
+dindon_de_ronquieres: de_ronquier
+ronquiere: de_ronquier
+yellow_shouldered_ronquiere: de_ronquier
+
+# di_parma_e_piacenza
+di_parma_e_piacenza: di_parma_e_piacenza
+tacchino_di_parma_e_piacenza: di_parma_e_piacenza
+
+# dinde_noire_du_bourbonnai
+dinde_noire_du_bourbonnai: dinde_noire_du_bourbonnai
+dinde_noire_du_bourbonnais: dinde_noire_du_bourbonnai
+
+# moscow_white
+moscow_white: moscow_white
+moscow_white_turkey: moscow_white
+
+# noir_de_bresse
+noir_de_bresse: noir_de_bresse
+dindon_noir_de_bresse: noir_de_bresse
+
+# rouge_des_ardenn
+rouge_des_ardenn: rouge_des_ardenn
+dindon_rouge_des_ardennes: rouge_des_ardenn
+
+# white_holland
+white_holland: white_holland
+white_holland_turkey: white_holland
+
+# keep as distinct breed when present
+north_caucasian_bronze: north_caucasian_bronze
+
+# non-breed / cross labels -> unknown
+turkey: unknown
+wild_crossed_with_domestic: unknown
+index: unknown

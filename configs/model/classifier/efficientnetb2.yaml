@@ -1,0 +1,22 @@
+name: efficientnetb2
+architecture: tf_efficientnet_b2.in1k
+num_classes: null
+pretrained: true
+img_size: 320
+crop_mode: detector_crop
+species_conditioned: true
+
+train:
+  epochs: 60
+  early_stopping_patience: 10
+  early_stopping_min_delta: 0.001
+  batch_size: 48
+  num_workers: 8
+  optimizer: adamw
+  lr: 0.0003
+  weight_decay: 0.05
+  scheduler: cosine
+  label_smoothing: 0.1
+  mixup_alpha: 0.2
+  cutmix_alpha: 1.0
+  amp: true

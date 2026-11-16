@@ -1,0 +1,28 @@
+# Add dataset-specific synonym mappings here as needed.
+# keys and values should be canonical snake_case labels.
+barbari: barbari
+barbery: barbery
+ear: unknown
+eye: unknown
+face: unknown
+harri: harri
+harry: harri
+horn_dorset: dorset_horn
+dorset_horn: dorset_horn
+marino: merino
+merino: merino
+mouth: unknown
+naeimi: naeimi
+najdi: najdi
+najdi_sheep: najdi
+ne_amy: ne_amy
+poll_dorset: polled_dorset
+polled_dorset: polled_dorset
+roman: roman
+sawakni: sawakni
+sawakny_red: sawakny_red
+suffolk: suffolk
+suffolk_sheep: suffolk
+swakny_white: swakny_white
+white_suffolk: white_suffolk
+sheep: unknown

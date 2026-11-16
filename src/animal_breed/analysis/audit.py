@@ -28,11 +28,13 @@ def audit_manifest(df: pd.DataFrame) -> dict[str, object]:
     species_counts = df["species_id"].value_counts()
     has_boxes = df[["bbox_xmin", "bbox_ymin", "bbox_xmax", "bbox_ymax"]].notna().all(axis=1)
 
+    source_urls = df["source_url"] if "source_url" in df.columns else pd.Series(dtype=str)
     return {
         "num_images": int(len(df)),
         "num_species": int(df["species_id"].nunique()),
         "num_breeds": int(df["breed_id"].nunique()),
         "num_sources": int(df["source"].nunique()),
+        "num_source_urls": int(source_urls.replace("", pd.NA).dropna().nunique()) if not source_urls.empty else 0,
         "num_images_with_boxes": int(has_boxes.sum()),
         "num_images_without_boxes": int((~has_boxes).sum()),
         "duplicate_path_count": int(df["path"].duplicated().sum()),

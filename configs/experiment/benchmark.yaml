@@ -1,0 +1,4 @@
+﻿name: benchmark
+notes: "Benchmark profile with strict quality gates and promotion checks."
+run_group: benchmark
+save_code: true

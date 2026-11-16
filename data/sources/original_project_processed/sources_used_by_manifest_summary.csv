@@ -1,0 +1,8 @@
+manifest_file,unique_sources
+data/processed/_tmp_ingest_check/unified_manifest.csv,1
+data/processed/_tmp_pending_integration/combined_manifest.csv,19
+data/processed/_tmp_pending_integration/unified_manifest.csv,19
+data/processed/combined_manifest.csv,65
+data/processed/unified_manifest.csv,65
+data/processed/unified_manifest.pre_cat_unknown_backup.csv,65
+data/processed/unified_manifest.pre_next_train_backup.csv,65

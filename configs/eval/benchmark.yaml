@@ -1,0 +1,34 @@
+﻿batch_size: 64
+num_workers: 8
+topk:
+  - 1
+  - 5
+iou_thresholds:
+  - 0.5
+  - 0.75
+calibration_bins: 15
+latency_sample_images: 64
+latency:
+  warmup_iters: 25
+  benchmark_iters: 100
+  batch_sizes:
+    - 1
+    - 8
+    - 16
+
+single_stage_detector_weights: artifacts/latest/single_stage/best.pt
+single_stage_data_yaml: data/processed/yolo_breed.yaml
+two_stage_detector_weights: artifacts/latest/two_stage_detector/best.pt
+two_stage_data_yaml: data/processed/yolo_species.yaml
+species_model_path: artifacts/latest/hierarchical/species/best.pt
+breed_models_dir: artifacts/latest/hierarchical/breed
+
+hard_negative:
+  two_stage_predictions_json: artifacts/latest/predictions/two_stage_predictions.json
+  single_stage_predictions_json: artifacts/latest/predictions/single_stage_predictions.json
+  output_csv: artifacts/latest/metrics/error_buckets.v1.csv
+  min_confidence: 0.7
+
+promotion:
+  baseline_path: artifacts/baseline/evaluation_summary_baseline.json
+  max_latency_regression_pct: 8.0

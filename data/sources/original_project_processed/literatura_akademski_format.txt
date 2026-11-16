@@ -1,0 +1,70 @@
+6. LITERATURA (akademski format, prema izvorima kori?tenima u manifestu)
+
+Automatizirano prikupljanje podataka (web-scraping)
+[1] Wikimedia Commons, kategorije slika za "alpaca" (web-scraping), dostupno na: https://commons.wikimedia.org
+[2] Wikimedia Commons, kategorije slika za "bactrian camel" (web-scraping), dostupno na: https://commons.wikimedia.org
+[3] Wikimedia Commons, kategorije slika za "cattle breeds" (web-scraping), dostupno na: https://commons.wikimedia.org
+[4] Wikimedia Commons, kategorije slika za "chicken breeds" (web-scraping), dostupno na: https://commons.wikimedia.org
+[5] Wikimedia Commons, kategorije slika za "donkey breeds" (web-scraping), dostupno na: https://commons.wikimedia.org
+[6] Wikimedia Commons, kategorije slika za "dromedary" (web-scraping), dostupno na: https://commons.wikimedia.org
+[7] Wikimedia Commons, kategorije slika za "duck breeds" (web-scraping), dostupno na: https://commons.wikimedia.org
+[8] Wikimedia Commons, kategorije slika za "goat breeds" (web-scraping), dostupno na: https://commons.wikimedia.org
+[9] Wikimedia Commons, kategorije slika za "goose breeds" (web-scraping), dostupno na: https://commons.wikimedia.org
+[10] Wikimedia Commons, kategorije slika za "horse breeds" (web-scraping), dostupno na: https://commons.wikimedia.org
+[11] iNaturalist, Photos of Domestic Bactrian Camel (Camelus bactrianus), dostupno na: https://www.inaturalist.org/taxa/524409-Camelus-bactrianus/browse_photos?quality_grade=any&photo_license=cc-by&term_id=22&term_value_id=24
+[12] iNaturalist, Photos of Wild Bactrian Camel (Camelus ferus), dostupno na: https://www.inaturalist.org/taxa/74138-Camelus-ferus/browse_photos?quality_grade=any&photo_license=cc0
+[13] Wikimedia Commons, kategorije slika za "llama" (web-scraping), dostupno na: https://commons.wikimedia.org
+[14] Wikimedia Commons, kategorije slika za "peafowl" (web-scraping), dostupno na: https://commons.wikimedia.org
+[15] Wikimedia Commons, kategorije slika za "pig breeds" (web-scraping), dostupno na: https://commons.wikimedia.org
+[16] Wikimedia Commons, kategorije slika za "pigeon breeds" (web-scraping), dostupno na: https://commons.wikimedia.org
+[17] Wikimedia Commons, kategorije slika za "rabbit breeds" (web-scraping), dostupno na: https://commons.wikimedia.org
+[18] Wikimedia Commons, kategorije slika za "sheep breeds" (web-scraping), dostupno na: https://commons.wikimedia.org
+[19] Feathersite ? The Poultry Page, turkey breed pages (web-scraping), dostupno na: https://www.feathersite.com
+[20] Wikimedia Commons, kategorije slika za "turkey breeds" (web-scraping), dostupno na: https://commons.wikimedia.org
+[21] Wikimedia Commons, kategorije slika za "water buffalo" (web-scraping), dostupno na: https://commons.wikimedia.org
+
+Preuzeti (download) javni skupovi podataka
+[22] Roboflow Universe, dataset "Alpaca 4lxyr" (workspace: macariola, version: 41), dostupno na: https://universe.roboflow.com/macariola/alpaca-4lxyr/dataset/41
+[23] Roboflow Universe, dataset "Alpaca Xqfiw" (workspace: alpaca-uljo6, version: 2), dostupno na: https://universe.roboflow.com/alpaca-uljo6/alpaca-xqfiw/dataset/2
+[24] Roboflow Universe, dataset "Arabian Camel Classification2" (workspace: object-detection-workspace-l4onq, version: 1), dostupno na: https://universe.roboflow.com/object-detection-workspace-l4onq/arabian-camel-classification2/dataset/1
+[25] Mendeley Data, A comprehensive image dataset of Bangladeshi cow breed identification, dostupno na: https://data.mendeley.com/datasets/yd84s35d73/1
+[26] Mendeley Data, Buffalo-Pak: Buffalo Breed Dataset from Pakistan for Visual Features Based Classification, dostupno na: https://data.mendeley.com/datasets/vdgnxsm692/2
+[27] Roboflow Universe, dataset "Camel Classification" (workspace: project-ztqj0, version: 1), dostupno na: https://universe.roboflow.com/project-ztqj0/camel-classification/dataset/1
+[28] Roboflow Universe, dataset "Camel Classification" (workspace: project-ztqj0, version: 2), dostupno na: https://universe.roboflow.com/project-ztqj0/camel-classification/dataset/2
+[29] Roboflow Universe, dataset "Camel Classification" (workspace: project-ztqj0, version: 3), dostupno na: https://universe.roboflow.com/project-ztqj0/camel-classification/dataset/3
+[30] Kaggle, Cat Breeds Dataset, dostupno na: https://www.kaggle.com/datasets/ma7555/cat-breeds-dataset
+[31] Kaggle, CatBreedsRefined-7k, dostupno na: https://www.kaggle.com/datasets/doctrinek/catbreedsrefined-7k
+[32] Mendeley Data, FeliBreed – A Multi-Breed Cat Image Dataset, dostupno na: https://data.mendeley.com/datasets/ng6tv57j5c/2
+[33] Kaggle, Cattle Breeds Dataset, dostupno na: https://www.kaggle.com/datasets/anandkumarsahu09/cattle-breeds-dataset
+[34] Kaggle, Cattle Dataset (Pig , Sheep ,Cow , Horse), dostupno na: https://www.kaggle.com/datasets/amiteshpatra07/cattle-dataset-pig-sheep-cow-horse
+[35] Mendeley Data, Cattle side view and back view dataset, dostupno na: https://data.mendeley.com/datasets/h2s22wr5py/2
+[36] Mendeley Data, GalliformeSpectra: A Hen Breed Dataset, dostupno na: https://data.mendeley.com/datasets/nk3zbvd5h8/1
+[37] Kaggle, Cow Breed Classification Dataset, dostupno na: https://www.kaggle.com/datasets/zaidworks0508/cow-breed-classification-dataset
+[38] Roboflow Universe, dataset "Donkey Auto Dataset" (workspace: shukurullo-meliboev, version: 4), dostupno na: https://universe.roboflow.com/shukurullo-meliboev/donkey-auto-dataset/dataset/4
+[39] Roboflow Universe, dataset "Donkey Auto Dataset" (workspace: shukurullo-meliboev, version: 5), dostupno na: https://universe.roboflow.com/shukurullo-meliboev/donkey-auto-dataset/dataset/5
+[40] Roboflow Universe, dataset "Donkey Bdn3l" (workspace: test-rznll, version: 1), dostupno na: https://universe.roboflow.com/test-rznll/donkey-bdn3l/dataset/1/images
+[41] Kaggle, Donkeys, Horses & Zebra Images Dataset, dostupno na: https://www.kaggle.com/datasets/ifeanyinneji/donkeys-horses-zebra-images-dataset
+[42] Roboflow Universe, dataset "Farm Animals Yrpj3" (workspace: cmpe-249), dostupno na: https://universe.roboflow.com/cmpe-249/farm-animals-yrpj3
+[43] Kaggle, GalliformeSpectra: A hen breed dataset, dostupno na: https://www.kaggle.com/datasets/galibusm/galliformespectra-a-hen-breed-dataset
+[44] Roboflow Universe, dataset "Geese Counting Project 2 Fipqg" (workspace: data-mining-2qphn, version: 4), dostupno na: https://universe.roboflow.com/data-mining-2qphn/geese-counting-project-2-fipqg/dataset/4
+[45] Kaggle, Horse Breeds, dostupno na: https://www.kaggle.com/datasets/olgabelitskaya/horse-breeds
+[46] iNaturalist Open Data (AWS S3), direct media access, dostupno na: https://inaturalist-open-data.s3.amazonaws.com/
+[47] Kaggle, Indian Cattle Image Dataset, dostupno na: https://www.kaggle.com/datasets/atharvadarpude/indian-cattle-image-dataset
+[48] Roboflow Universe, dataset "Llamas 2tdzp" (workspace: ts-my9bt, version: 1), dostupno na: https://universe.roboflow.com/ts-my9bt/llamas-2tdzp/dataset/1
+[49] Roboflow Universe, dataset "Llamas Anvhx" (workspace: jetcounterdemo, version: 1), dostupno na: https://universe.roboflow.com/jetcounterdemo/llamas-anvhx/dataset/1
+[50] Roboflow Universe, dataset "Llamas" (workspace: hardee, version: 1), dostupno na: https://universe.roboflow.com/hardee/llamas/dataset/1
+[51] University of Oxford, Visual Geometry Group (VGG), Oxford-IIIT Pet Dataset, dostupno na: https://www.robots.ox.ac.uk/~vgg/data/pets/
+[52] Roboflow Universe, dataset "Pig Breed Identification" (workspace: kalyani-government-engineering-college), dostupno na: https://universe.roboflow.com/kalyani-government-engineering-college/pig-breed-identification
+[53] Roboflow Universe, dataset "Pig Breed Identification 1wnjh" (workspace: wowwww), dostupno na: https://universe.roboflow.com/wowwww/pig-breed-identification-1wnjh
+[54] Kaggle, Pig dataset, dostupno na: https://www.kaggle.com/datasets/zimange/pig-dataset
+[55] Roboflow Universe, dataset "Pig Detection Kaimq A8ret Abpd" (workspace: rf100-vl), dostupno na: https://universe.roboflow.com/rf100-vl/pig-detection-kaimq-a8ret-abpd
+[56] Roboflow Universe, dataset "Pure Chicken Breeds Identification" (workspace: sliit-aecgu), dostupno na: https://universe.roboflow.com/sliit-aecgu/pure-chicken-breeds-identification
+[57] Roboflow Universe, dataset "Rabbit Breed Classification" (workspace: rabbit-management), dostupno na: https://universe.roboflow.com/rabbit-management/rabbit-breed-classification
+[58] Mendeley Data, RecBov51c, dostupno na: https://data.mendeley.com/datasets/8ysxtyf8p2/1
+[59] Kaggle, Sheep Breed Classification, dostupno na: https://www.kaggle.com/datasets/divyansh22/sheep-breed-classification
+[60] Mendeley Data, Goat Image Dataset, dostupno na: https://data.mendeley.com/datasets/4skwhnrscr/2
+[61] Roboflow Universe, dataset "Sheep Breeds 4ytic" (workspace: biomedical-engineering-mansoura-university), dostupno na: https://universe.roboflow.com/biomedical-engineering-mansoura-university/sheep-breeds-4ytic
+[62] Kaggle, Sheep Breeds Dataset, dostupno na: https://www.kaggle.com/datasets/alaayusufsiyamek/sheep-breeds-dataset
+[63] Mendeley Data, Data for: On Farm Sheep Breed Classification Using Deep Learning, dostupno na: https://data.mendeley.com/datasets/64gkbz8bdb/2
+[64] Stanford Vision Lab, Stanford Dogs dataset for Fine-Grained Visual Categorization, dostupno na: http://vision.stanford.edu/aditya86/ImageNetDogs/
+[65] Roboflow Universe, dataset "Turkey Ei1zv" (workspace: kronee-chan, version: 1), dostupno na: https://universe.roboflow.com/kronee-chan/turkey-ei1zv/dataset/1

@@ -1,0 +1,16 @@
+# Add dataset-specific synonym mappings here as needed.
+# keys and values should be canonical snake_case labels.
+berkshire: berkshire
+duroc: duroc
+landrace: landrace
+large_white: yorkshire
+largewhite: yorkshire
+pietrain: pietrain
+pig: unknown
+
+# Wikimedia cleanup aliases
+unknown: unknown
+unidentified_pig_breed: unknown
+mixed_breed: unknown
+american_yorkshire: yorkshire
+american_berkshire: berkshire

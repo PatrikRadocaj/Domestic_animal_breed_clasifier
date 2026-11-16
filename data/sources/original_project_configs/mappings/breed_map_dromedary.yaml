@@ -1,0 +1,65 @@
+# Dromedary camel subspecies / type normalization.
+# Canonical classes used in this project:
+# - majaheem
+# - waddah
+# - homor
+# - sofor
+#
+# Color-style label mapping (as provided by user):
+# - black-camel -> majaheem
+# - white-camel -> waddah (maghatir/maghateer same bucket)
+# - reddish-brown-camel -> homor
+# - yellowish-camel -> sofor
+# - shaele/gray -> not in 4-class set, mapped to unknown
+
+# majaheem
+majaheem: majaheem
+majahim: majaheem
+majahem: majaheem
+majahimah: majaheem
+black_camel: majaheem
+dark_camel: majaheem
+very_dark_camel: majaheem
+
+# sofor (also written sufor / sufr)
+sofor: sofor
+sufor: sofor
+sufr: sofor
+sofur: sofor
+asfar: sofor
+yellow: sofor
+yellowish_camel: sofor
+beige_camel: sofor
+
+# waddah
+waddah: waddah
+wadaah: waddah
+wadhah: waddah
+waddha: waddah
+white: waddah
+white_camel: waddah
+
+# homor (also written hamor / ahmar)
+homor: homor
+hamor: homor
+hamr: homor
+ahmar: homor
+red: homor
+reddish_brown_camel: homor
+red_brown_camel: homor
+
+# maghatir / maghateer variants are merged into waddah
+maghateer: waddah
+maghater: waddah
+maghatir: waddah
+maqatir: waddah
+
+# shaele / gray variants are outside this 4-class mapping
+shaele: unknown
+gray_camel: unknown
+grey_camel: unknown
+gray: unknown
+grey: unknown
+
+# fallback bucket
+unknown: unknown

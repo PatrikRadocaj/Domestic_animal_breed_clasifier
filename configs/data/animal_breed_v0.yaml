@@ -8,10 +8,16 @@ prepared_yolo_breed_dir: data/processed/yolo_breed
 
 raw_image_roots:
   - data/raw
+yolo_sources_root: data/raw/yolo_sources
 
 annotation_files: []
 source_name: local_tree
 default_license: unknown
+source_registry_path: data/sources/source_registry_v1.csv
+cross_dataset_label_map_path: configs/mappings/cross_dataset_label_map.yaml
+unmapped_labels_report_path: results/reports/unmapped_labels_report.csv
+manual_review_report_path: results/reports/manual_review_labels.csv
+source_reports_output_dir: results/reports/sources
 
 image_extensions:
   - .jpg
@@ -21,9 +27,11 @@ image_extensions:
 
 directory_layout:
   # Expected relative layout for raw tree ingestion:
-  # root/species_id/breed_slug/image.ext
-  species_level: 0
-  breed_level: 1
+  # root/<source_dataset>/species_id/breed_slug/image.ext
+  # If source_level is null, source_name is used for every row.
+  source_level: 0
+  species_level: 1
+  breed_level: 2
 
 validation:
   require_existing_files: true
@@ -37,3 +45,103 @@ splitting:
   stratify_by: breed_id
   group_by: duplicate_cluster
   min_count_for_stratify: 2
+
+quality:
+  enabled: true
+  strictness: benchmark
+  fail_on_warnings: false
+  split_column: split
+  source_column: source
+  max_bbox_aspect: 12.0
+  dedup:
+    enabled: true
+    near_enabled: true
+    max_images: 3000
+
+species_aware:
+  registry_metadata_path: data/sources/original_project_configs/datasets_registry.csv
+  output_root: data/processed/species_aware
+  report_root: results/reports/species_aware
+  target_species: []
+  max_images_per_split: 0
+  train:
+    enabled: false
+    base_model: yolo11n.pt
+    imgsz: 640
+    epochs: 10
+    batch: 16
+    workers: 8
+    amp: true
+    cache: false
+    weights_root: artifacts/species_detectors
+  shared_train:
+    enabled: false
+    output_dir: data/processed/species_aware/shared_species
+    base_model: yolo11n.pt
+    imgsz: 640
+    epochs: 10
+    batch: 16
+    workers: 8
+    amp: true
+    cache: false
+    weights_root: artifacts/shared_species_detector
+    max_images_per_species_per_split: 0
+  hybrid:
+    enabled: false
+    output_dir: data/processed/species_aware/hybrid_shared
+    target_species: []
+    seed: 42
+    synthetic_ratio: 0.40
+    real_ratio: 0.40
+    augmented_ratio: 0.20
+    min_outer_padding: 1
+    min_inter_image_padding: 1
+    min_canvas_size: 1024
+    max_canvas_size: 1536
+    absolute_max_canvas_size: 2048
+    allow_canvas_expand_beyond_max: false
+    min_cell_size: 260
+    max_cell_size: 560
+    placement_scale_min: 0.88
+    placement_scale_max: 1.20
+    grid_jitter: 0.06
+    synthetic_crop_to_objects: true
+    synthetic_crop_margin_px: 10
+    synthetic_min_box_size_px: 25
+    synthetic_injection_gap_min: 5
+    synthetic_injection_gap_max: 10
+    injection_count_min: 1
+    injection_count_max: 3
+    extra_synthetic_budget_fraction: 0.05
+    background_texture_probability_min: 0.05
+    background_texture_probability_max: 0.15
+    synthetic_backgrounds_dir: data/raw/synthetic_backgrounds
+    decoded_image_cache_size: 8
+    resized_image_cache_size: 8
+    debug_subset_count: 12
+    test_subset_only: false
+    test_subset_train_count: 32
+    test_subset_val_count: 16
+    allow_scale_up: true
+    strong_rotation_limit: 30
+    mild_rotation_limit: 10
+    random_crop_scale_min: 0.70
+    random_crop_scale_max: 1.00
+    brightness_contrast_limit: 0.22
+    gaussian_noise_std_fraction: 0.03
+    val_mode: real_only
+    train_metadata_write: true
+    max_train_objects_per_image: 8
+    max_eval_objects_per_image: 16
+    train:
+      enabled: false
+      base_model: yolo11n.pt
+      device: 0
+      imgsz: 1280
+      epochs: 10
+      batch: 16
+      workers: 16
+      amp: true
+      cache: false
+      project: artifacts/hybrid_shared_detector
+      name: hybrid_shared

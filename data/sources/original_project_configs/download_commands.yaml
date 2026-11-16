@@ -1,0 +1,269 @@
+datasets:
+  horse-breeds-olgabelitskaya:
+    command: kaggle datasets download -d olgabelitskaya/horse-breeds -p "{raw_dir}/horse-breeds-olgabelitskaya"
+      --unzip
+  cattle-breeds-anandkumarsahu09:
+    command: kaggle datasets download -d anandkumarsahu09/cattle-breeds-dataset -p
+      "{raw_dir}/cattle-breeds-anandkumarsahu09" --unzip
+  cow-breed-classification-zaidworks0508:
+    command: kaggle datasets download -d zaidworks0508/cow-breed-classification-dataset
+      -p "{raw_dir}/cow-breed-classification-zaidworks0508" --unzip
+  indian-cattle-image-atharvadarpude:
+    command: kaggle datasets download -d atharvadarpude/indian-cattle-image-dataset
+      -p "{raw_dir}/indian-cattle-image-atharvadarpude" --unzip
+  sheep-breed-classification-divyansh22:
+    command: kaggle datasets download -d divyansh22/sheep-breed-classification -p
+      "{raw_dir}/sheep-breed-classification-divyansh22" --unzip
+  sheep-breeds-alaayusufsiyamek:
+    command: kaggle datasets download -d alaayusufsiyamek/sheep-breeds-dataset -p
+      "{raw_dir}/sheep-breeds-alaayusufsiyamek" --unzip
+  sheep-breeds-4skwhnrscr:
+    mendeley_public_zip:
+      dataset_token: 4skwhnrscr
+      version: 2
+      extract_nested_zip: true
+      extract_tar_xz: true
+  chicken-breeds-nk3zbvd5h8:
+    mendeley_public_zip:
+      dataset_token: nk3zbvd5h8
+      version: 1
+      extract_nested_zip: true
+      extract_tar_xz: true
+  galliformespectra-galibusm:
+    command: kaggle datasets download -d galibusm/galliformespectra-a-hen-breed-dataset
+      -p "{raw_dir}/galliformespectra-galibusm" --unzip
+  oxford-iiit-pet-vgg:
+    command: powershell -NoProfile -Command "$dst='{raw_dir}/oxford-iiit-pet-vgg';
+      New-Item -ItemType Directory -Force -Path $dst | Out-Null; Invoke-WebRequest
+      -Uri 'https://www.robots.ox.ac.uk/~vgg/data/pets/data/images.tar.gz' -OutFile
+      ($dst + '/images.tar.gz'); Invoke-WebRequest -Uri 'https://www.robots.ox.ac.uk/~vgg/data/pets/data/annotations.tar.gz'
+      -OutFile ($dst + '/annotations.tar.gz'); tar -xzf ($dst + '/images.tar.gz')
+      -C $dst; tar -xzf ($dst + '/annotations.tar.gz') -C $dst"
+  stanford-dogs-imagenetdogs:
+    command: powershell -NoProfile -Command "$dst='{raw_dir}/stanford-dogs-imagenetdogs';
+      New-Item -ItemType Directory -Force -Path $dst | Out-Null; Invoke-WebRequest
+      -Uri 'http://vision.stanford.edu/aditya86/ImageNetDogs/images.tar' -OutFile
+      ($dst + '/images.tar'); tar -xf ($dst + '/images.tar') -C $dst"
+  catbreedsrefined-7k-doctrinek:
+    command: kaggle datasets download -d doctrinek/catbreedsrefined-7k -p "{raw_dir}/catbreedsrefined-7k-doctrinek"
+      --unzip
+  cat-breeds-ma7555:
+    command: kaggle datasets download -d ma7555/cat-breeds-dataset -p "{raw_dir}/cat-breeds-ma7555"
+      --unzip
+  cats-dogs-ng6tv57j5c:
+    mendeley_public_zip:
+      dataset_token: ng6tv57j5c
+      version: 2
+      extract_nested_zip: true
+      extract_tar_xz: true
+  buffalo-breeds-vdgnxsm692:
+    mendeley_public_zip:
+      dataset_token: vdgnxsm692
+      version: 2
+      extract_nested_zip: true
+      extract_tar_xz: true
+  bangladeshi-cow-breeds-yd84s35d73:
+    mendeley_public_zip:
+      dataset_token: yd84s35d73
+      version: 1
+      extract_nested_zip: true
+  beef-cattle-muzzle-zenodo-6324361:
+    command: powershell -NoProfile -Command "$dst='{raw_dir}/beef-cattle-muzzle-zenodo-6324361';
+      New-Item -ItemType Directory -Force -Path $dst | Out-Null; Invoke-WebRequest
+      -Uri 'https://zenodo.org/api/records/6324361/files/BeefCattle_Muzzle_database.zip/content'
+      -OutFile ($dst + '/beef_cattle_muzzle_database.zip'); tar -xf ($dst + '/beef_cattle_muzzle_database.zip')
+      -C $dst"
+  multicamcows2024-data-bris:
+    command: powershell -NoProfile -Command "$dst='{raw_dir}/multicamcows2024-data-bris';
+      New-Item -ItemType Directory -Force -Path $dst | Out-Null; Invoke-WebRequest
+      -Uri 'https://data.bris.ac.uk/datasets/tar/2inu67jru7a6821kkgehxg3cv2.zip' -OutFile
+      ($dst + '/multicamcows2024.zip'); tar -xf ($dst + '/multicamcows2024.zip') -C
+      $dst"
+  cowdatabase2-github-ruchaya:
+    command: powershell -NoProfile -Command "$dst='{raw_dir}/cowdatabase2-github-ruchaya';
+      if (-not (Test-Path $dst)) { git clone --depth 1 https://github.com/ruchaya/CowDatabase2.git
+      $dst } else { Write-Host 'Already exists:' $dst }"
+  recbov51c-8ysxtyf8p2:
+    mendeley_public_zip:
+      dataset_token: 8ysxtyf8p2
+      version: 1
+      extract_nested_zip: true
+      extract_tar_xz: true
+  cattle-side-back-h2s22wr5py:
+    mendeley_public_zip:
+      dataset_token: h2s22wr5py
+      version: 2
+      extract_nested_zip: true
+      extract_tar_xz: true
+  sheepbreed-64gkbz8bdb:
+    mendeley_public_zip:
+      dataset_token: 64gkbz8bdb
+      version: 2
+      extract_nested_zip: true
+      extract_tar_xz: true
+  cattle-pig-sheep-cow-horse-amiteshpatra07:
+    command: kaggle datasets download -d amiteshpatra07/cattle-dataset-pig-sheep-cow-horse
+      -p "{raw_dir}/cattle-pig-sheep-cow-horse-amiteshpatra07" --unzip
+  pig-dataset-zimange:
+    command: kaggle datasets download -d zimange/pig-dataset -p "{raw_dir}/pig-dataset-zimange"
+      --unzip
+  donkeys-horses-zebra-ifeanyinneji:
+    command: kaggle datasets download -d ifeanyinneji/donkeys-horses-zebra-images-dataset
+      -p "{raw_dir}/donkeys-horses-zebra-ifeanyinneji" --unzip
+  chicken-detection-tracking-nirmalsankalana:
+    command: kaggle datasets download -d nirmalsankalana/chicken-detection-and-tracking-dataset
+      -p "{raw_dir}/chicken-detection-tracking-nirmalsankalana" --unzip
+  donkey-breeds-wikimedia:
+    wikimedia_commons:
+      category: Category:Donkey_breeds
+      output_subdir: wikimedia/donkey
+      species_hint: donkey
+      include_subcategories: true
+      max_subcategories: 300
+      max_subcategory_depth: 1
+      max_files_per_category: 200
+      max_total_files: 2500
+      breed_aliases:
+        miniature_donkeys: miniature_donkey
+        miniature_mediterranean: miniature_mediterranean_donkey
+        miniature_mediterranean_donkeys: miniature_mediterranean_donkey
+        pyreneen: pyrenean
+        pyreneen_donkey: pyrenean
+        asino_dellamiata: amiatina
+        asino_di_martina_franca: martina_franca
+        asino_grigio_siciliano: grigio_siciliano
+        asino_ragusano: ragusano
+        asino_romagnolo: romagnolo
+        asino_sardo: sardo
+        bourbonnais: bourbonnais_donkey
+        corsican: corsican_donkey
+        cotentin: cotentin_donkey
+        normand: normand_donkey
+        provence: provence_donkey
+        asinara: asinara_donkey
+  alpaca-4lxyr-roboflow-v41:
+    command: python tools/download_registry_source.py --dataset-id alpaca-4lxyr-roboflow-v41
+      --raw-dir "{raw_dir}"
+  alpaca-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id alpaca-wikimedia
+      --raw-dir "{raw_dir}"
+  alpaca-xqfiw-roboflow-v2:
+    command: python tools/download_registry_source.py --dataset-id alpaca-xqfiw-roboflow-v2
+      --raw-dir "{raw_dir}"
+  arabian-camel-classification2-roboflow-v1:
+    command: python tools/download_registry_source.py --dataset-id arabian-camel-classification2-roboflow-v1
+      --raw-dir "{raw_dir}"
+  bactrian-camel-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id bactrian-camel-wikimedia
+      --raw-dir "{raw_dir}"
+  camel-classification-roboflow-v1:
+    command: python tools/download_registry_source.py --dataset-id camel-classification-roboflow-v1
+      --raw-dir "{raw_dir}"
+  camel-classification-roboflow-v2:
+    command: python tools/download_registry_source.py --dataset-id camel-classification-roboflow-v2
+      --raw-dir "{raw_dir}"
+  camel-classification-roboflow-v3:
+    command: python tools/download_registry_source.py --dataset-id camel-classification-roboflow-v3
+      --raw-dir "{raw_dir}"
+  cattle-breeds-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id cattle-breeds-wikimedia
+      --raw-dir "{raw_dir}"
+  chicken-breeds-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id chicken-breeds-wikimedia
+      --raw-dir "{raw_dir}"
+  donkey-auto-dataset-roboflow-v4:
+    command: python tools/download_registry_source.py --dataset-id donkey-auto-dataset-roboflow-v4
+      --raw-dir "{raw_dir}"
+  donkey-auto-dataset-roboflow-v5:
+    command: python tools/download_registry_source.py --dataset-id donkey-auto-dataset-roboflow-v5
+      --raw-dir "{raw_dir}"
+  donkey-bdn3l-roboflow-v1:
+    command: python tools/download_registry_source.py --dataset-id donkey-bdn3l-roboflow-v1
+      --raw-dir "{raw_dir}"
+  dromedary-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id dromedary-wikimedia
+      --raw-dir "{raw_dir}"
+  duck-breeds-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id duck-breeds-wikimedia
+      --raw-dir "{raw_dir}"
+  farm-animals-v1i-yolo26-roboflow:
+    command: python tools/download_registry_source.py --dataset-id farm-animals-v1i-yolo26-roboflow
+      --raw-dir "{raw_dir}"
+  geese-counting-project-2-fipqg-roboflow-v4:
+    command: python tools/download_registry_source.py --dataset-id geese-counting-project-2-fipqg-roboflow-v4
+      --raw-dir "{raw_dir}"
+  goat-breeds-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id goat-breeds-wikimedia
+      --raw-dir "{raw_dir}"
+  goose-breeds-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id goose-breeds-wikimedia
+      --raw-dir "{raw_dir}"
+  horse-breeds-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id horse-breeds-wikimedia
+      --raw-dir "{raw_dir}"
+  inaturalist-bactrian-camel-manual:
+    command: python tools/download_registry_source.py --dataset-id inaturalist-bactrian-camel-manual
+      --raw-dir "{raw_dir}"
+  inaturalist-camelus-bactrianus-cc-by:
+    command: python tools/download_registry_source.py --dataset-id inaturalist-camelus-bactrianus-cc-by
+      --raw-dir "{raw_dir}"
+  inaturalist-camelus-ferus-cc0:
+    command: python tools/download_registry_source.py --dataset-id inaturalist-camelus-ferus-cc0
+      --raw-dir "{raw_dir}"
+  llama-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id llama-wikimedia
+      --raw-dir "{raw_dir}"
+  llamas-2tdzp-roboflow-v1:
+    command: python tools/download_registry_source.py --dataset-id llamas-2tdzp-roboflow-v1
+      --raw-dir "{raw_dir}"
+  llamas-anvhx-roboflow-v1:
+    command: python tools/download_registry_source.py --dataset-id llamas-anvhx-roboflow-v1
+      --raw-dir "{raw_dir}"
+  llamas-hardee-roboflow-v1:
+    command: python tools/download_registry_source.py --dataset-id llamas-hardee-roboflow-v1
+      --raw-dir "{raw_dir}"
+  peafowl-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id peafowl-wikimedia
+      --raw-dir "{raw_dir}"
+  pig-breed-identification-v3:
+    command: python tools/download_registry_source.py --dataset-id pig-breed-identification-v3
+      --raw-dir "{raw_dir}"
+  pig-breed-identification-v5-pleseeeeee:
+    command: python tools/download_registry_source.py --dataset-id pig-breed-identification-v5-pleseeeeee
+      --raw-dir "{raw_dir}"
+  pig-breeds-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id pig-breeds-wikimedia
+      --raw-dir "{raw_dir}"
+  pig-detection-kaimq-a8ret-abpd:
+    command: python tools/download_registry_source.py --dataset-id pig-detection-kaimq-a8ret-abpd
+      --raw-dir "{raw_dir}"
+  pigeon-breeds-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id pigeon-breeds-wikimedia
+      --raw-dir "{raw_dir}"
+  pure-chicken-breeds-identification-roboflow:
+    command: python tools/download_registry_source.py --dataset-id pure-chicken-breeds-identification-roboflow
+      --raw-dir "{raw_dir}"
+  rabbit-breed-classification-roboflow:
+    command: python tools/download_registry_source.py --dataset-id rabbit-breed-classification-roboflow
+      --raw-dir "{raw_dir}"
+  rabbit-breeds-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id rabbit-breeds-wikimedia
+      --raw-dir "{raw_dir}"
+  sheep-breeds-4ytic-roboflow:
+    command: python tools/download_registry_source.py --dataset-id sheep-breeds-4ytic-roboflow
+      --raw-dir "{raw_dir}"
+  sheep-breeds-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id sheep-breeds-wikimedia
+      --raw-dir "{raw_dir}"
+  turkey-breeds-feathersite:
+    command: python tools/download_registry_source.py --dataset-id turkey-breeds-feathersite
+      --raw-dir "{raw_dir}"
+  turkey-breeds-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id turkey-breeds-wikimedia
+      --raw-dir "{raw_dir}"
+  turkey-v1i-yolo26-roboflow:
+    command: python tools/download_registry_source.py --dataset-id turkey-v1i-yolo26-roboflow
+      --raw-dir "{raw_dir}"
+  water-buffalo-wikimedia:
+    command: python tools/download_registry_source.py --dataset-id water-buffalo-wikimedia
+      --raw-dir "{raw_dir}"

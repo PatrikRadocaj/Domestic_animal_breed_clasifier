@@ -14,3 +14,69 @@ latency:
     - 8
     - 16
 
+calibration_bins: 15
+latency_sample_images: 64
+
+single_stage_detector_weights: artifacts/latest/single_stage/best.pt
+single_stage_data_yaml: data/processed/yolo_breed.yaml
+two_stage_detector_weights: artifacts/latest/two_stage_detector/best.pt
+two_stage_data_yaml: data/processed/yolo_species.yaml
+species_model_path: artifacts/latest/hierarchical/species/best.pt
+breed_models_dir: artifacts/latest/hierarchical/breed
+
+hard_negative:
+  two_stage_predictions_json: artifacts/latest/predictions/two_stage_predictions.json
+  single_stage_predictions_json: artifacts/latest/predictions/single_stage_predictions.json
+  output_csv: artifacts/latest/metrics/error_buckets.v1.csv
+  min_confidence: 0.7
+
+promotion:
+  baseline_path: artifacts/baseline/evaluation_summary_baseline.json
+  max_latency_regression_pct: 8.0
+
+mining:
+  detector_mode: per_species
+  shared_detector_weights: artifacts/shared_species_detector/weights/best.pt
+  allowed_species: []
+  allowed_source_datasets: []
+  excluded_source_datasets: []
+  source_mode: yolo_only
+  image_roots:
+    - data/raw
+  detectors_weights_root: artifacts/species_detectors
+  output_dir: results/mining
+  visual_samples_dir: results/mining/visual_samples
+  visual_samples_limit: 300
+  output_name_suffix: ""
+
+  max_images: 0
+  sort_images: true
+  balanced_max_images_across_datasets: true
+  shard_count: 1
+  shard_index: 0
+  conf_threshold_default: 0.7
+  conf_thresholds: {}
+  min_box_area_px: 400.0
+  min_box_side_px: 16.0
+  max_box_area_frac: 0.25
+  max_box_side_frac: 0.75
+  max_detections_per_species_per_image: 2
+  max_detections_per_image: 6
+  require_existing_labels: true
+  include_same_species_extra: false
+  nms_iou: 0.5
+  label_match_iou: 0.5
+
+  high_priority_min_conf: 0.85
+  high_priority_max_rows: 5000
+  high_priority_conflict_types:
+    - background_unlabeled
+  spotcheck_sample_size: 300
+  spotcheck_seed: 42
+  agreement_check:
+    enabled: true
+    required: false
+    min_iou: 0.4
+    conf_threshold_scale: 0.9
+    conf_threshold_min: 0.25
+

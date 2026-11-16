@@ -1,0 +1,17 @@
+dataset_id,source_url,canonical_url,is_duplicate_in_registry,duplicate_dataset_id,reachability,status_code,priority
+oxford-pets-by-breed-detection,https://public.roboflow.com/object-detection/oxford-pets/1,https://public.roboflow.com/object-detection/oxford-pets/1,False,,ok,200,P1
+aerial-sheep-riis-v1,https://universe.roboflow.com/riis/aerial-sheep/dataset/1,https://universe.roboflow.com/riis/aerial-sheep/dataset/1,False,,http_error,403,P1
+cattle-detection-yprhp-v1,https://universe.roboflow.com/cattle-detection-fuwlj/cattle-detection-yprhp/dataset/1,https://universe.roboflow.com/cattle-detection-fuwlj/cattle-detection-yprhp/dataset/1,False,,http_error,403,P1
+pig-counting-j2gjo-v1,https://universe.roboflow.com/phuonglv/pig-counting-j2gjo/dataset/1,https://universe.roboflow.com/phuonglv/pig-counting-j2gjo/dataset/1,False,,http_error,403,P1
+chicken-detection-and-tracking-v1,https://universe.roboflow.com/chickens/chicken-detection-and-tracking/dataset/1,https://universe.roboflow.com/chickens/chicken-detection-and-tracking/dataset/1,False,,http_error,403,P3
+cow-mounting-big-box-v1,https://universe.roboflow.com/cattle-pose/cow-mounting-big-box/dataset/1,https://universe.roboflow.com/cattle-pose/cow-mounting-big-box/dataset/1,False,,http_error,403,P2
+claim-donkey-jcvc5-v1,https://universe.roboflow.com/brockstar-media-pkuez/claim-donkey-jcvc5/dataset/1,https://universe.roboflow.com/brockstar-media-pkuez/claim-donkey-jcvc5/dataset/1,False,,http_error,403,P1
+animal-detection-using-yolov8-v1,https://universe.roboflow.com/animal-detection-using-yolov8/animal-detection-using-yolov8/dataset/1,https://universe.roboflow.com/animal-detection-using-yolov8/animal-detection-using-yolov8/dataset/1,False,,http_error,403,P2
+livestock-la44y-v8,https://universe.roboflow.com/livestock-r3c9c/livestock-la44y/dataset/8,https://universe.roboflow.com/livestock-r3c9c/livestock-la44y/dataset/8,False,,http_error,403,P2
+farm-intrusion-detection-dataset,https://universe.roboflow.com/school-iugkg/farm-intrusion-detection-dataset,https://universe.roboflow.com/school-iugkg/farm-intrusion-detection-dataset,False,,http_error,403,P2
+open-images-v7-ultralytics,https://docs.ultralytics.com/datasets/detect/open-images-v7/,https://docs.ultralytics.com/datasets/detect/open-images-v7,False,,ok,200,P1
+open-images-v7-animals-yolo-kaggle,https://www.kaggle.com/datasets/sergiomoy/open-imagea-v7-animals-yolo,https://kaggle.com/datasets/sergiomoy/open-imagea-v7-animals-yolo,False,,ok,200,P1
+pig-detection-yolo-mixed-sources-kaggle,https://www.kaggle.com/datasets/rbbbjp/pig-detection-yolo-dataset-mixed-sources,https://kaggle.com/datasets/rbbbjp/pig-detection-yolo-dataset-mixed-sources,False,,ok,200,P1
+dog-face-detection-yolo-kaggle,https://www.kaggle.com/datasets/wutheringwang/dog-face-detectionyolo-format,https://kaggle.com/datasets/wutheringwang/dog-face-detectionyolo-format,False,,ok,200,P3
+pet-face-detection-keypoints-kaggle,https://www.kaggle.com/datasets/vladsmirno/petfacedetection,https://kaggle.com/datasets/vladsmirno/petfacedetection,False,,ok,200,P2
+sheep-detection-andrewmvd-kaggle,https://www.kaggle.com/datasets/andrewmvd/sheep-detection,https://kaggle.com/datasets/andrewmvd/sheep-detection,False,,ok,200,P3

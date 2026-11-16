@@ -33,6 +33,11 @@ REQUIRED_COLUMNS: tuple[str, ...] = (
     "quality_tags",
 )
 
+OPTIONAL_SOURCE_COLUMNS: tuple[str, ...] = (
+    "source_url",
+    "source_type",
+)
+
 
 @dataclass(frozen=True)
 class ValidationReport:
@@ -113,6 +118,14 @@ def validate_manifest(
     duplicate_paths = int(df["path"].duplicated().sum())
     if duplicate_paths:
         warnings.append(f"{duplicate_paths} duplicate file paths found.")
+
+    if "source_url" in df.columns:
+        missing_source_urls = int(df["source_url"].fillna("").astype(str).str.strip().eq("").sum())
+        if missing_source_urls:
+            warnings.append(
+                f"{missing_source_urls} rows have empty source_url. "
+                "Set data.source_registry_path to preserve provenance."
+            )
 
     return ValidationReport(not errors, tuple(errors), tuple(warnings))
 

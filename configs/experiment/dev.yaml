@@ -1,0 +1,4 @@
+﻿name: dev
+notes: "Fast dev loop with strict logging and small runs."
+run_group: dev
+save_code: true

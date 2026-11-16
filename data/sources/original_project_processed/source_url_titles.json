@@ -1,0 +1,290 @@
+[
+  {
+    "url": "http://vision.stanford.edu/aditya86/ImageNetDogs/",
+    "title": "Stanford Dogs dataset for Fine-Grained Visual Categorization",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://commons.wikimedia.org",
+    "title": "Wikimedia Commons",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://data.mendeley.com/datasets/4skwhnrscr/2",
+    "title": "Goat Image Dataset - Mendeley Data",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://data.mendeley.com/datasets/64gkbz8bdb/2",
+    "title": "Data for: On Farm Sheep Breed Classification Using Deep Learning - Mendeley Data",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://data.mendeley.com/datasets/8ysxtyf8p2/1",
+    "title": "RecBov51c - Mendeley Data",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://data.mendeley.com/datasets/h2s22wr5py/2",
+    "title": "Cattle side view and back view dataset - Mendeley Data",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://data.mendeley.com/datasets/ng6tv57j5c/2",
+    "title": "FeliBreed – A Multi-Breed Cat Image Dataset - Mendeley Data",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://data.mendeley.com/datasets/nk3zbvd5h8/1",
+    "title": "GalliformeSpectra: A Hen Breed Dataset - Mendeley Data",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://data.mendeley.com/datasets/vdgnxsm692/2",
+    "title": "Buffalo-Pak: Buffalo Breed Dataset from Pakistan for Visual Features Based Classification - Mendeley Data",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://data.mendeley.com/datasets/yd84s35d73/1",
+    "title": "A comprehensive image dataset of Bangladeshi cow breed identification - Mendeley Data",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/",
+    "title": null,
+    "status": "no_title",
+    "error": ""
+  },
+  {
+    "url": "https://universe.roboflow.com/alpaca-uljo6/alpaca-xqfiw/dataset/2",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/biomedical-engineering-mansoura-university/sheep-breeds-4ytic",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/cmpe-249/farm-animals-yrpj3",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/data-mining-2qphn/geese-counting-project-2-fipqg/dataset/4",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/hardee/llamas/dataset/1",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/jetcounterdemo/llamas-anvhx/dataset/1",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/kalyani-government-engineering-college/pig-breed-identification",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/kronee-chan/turkey-ei1zv/dataset/1",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/macariola/alpaca-4lxyr/dataset/41",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/object-detection-workspace-l4onq/arabian-camel-classification2/dataset/1",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/project-ztqj0/camel-classification/dataset/1",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/project-ztqj0/camel-classification/dataset/2",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/project-ztqj0/camel-classification/dataset/3",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/rabbit-management/rabbit-breed-classification",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/rf100-vl/pig-detection-kaimq-a8ret-abpd",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/shukurullo-meliboev/donkey-auto-dataset/dataset/4",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/shukurullo-meliboev/donkey-auto-dataset/dataset/5",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/sliit-aecgu/pure-chicken-breeds-identification",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/test-rznll/donkey-bdn3l/dataset/1/images",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/ts-my9bt/llamas-2tdzp/dataset/1",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://universe.roboflow.com/wowwww/pig-breed-identification-1wnjh",
+    "title": null,
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.feathersite.com",
+    "title": "FeatherSite",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.inaturalist.org/taxa/524409-Camelus-bactrianus/browse_photos?quality_grade=any&photo_license=cc-by&term_id=22&term_value_id=24",
+    "title": "Photos of Domestic Bactrian Camel (Camelus bactrianus) · iNaturalist",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.inaturalist.org/taxa/74138-Camelus-ferus/browse_photos?quality_grade=any&photo_license=cc0",
+    "title": "Photos of Wild Bactrian Camel (Camelus ferus) · iNaturalist",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/alaayusufsiyamek/sheep-breeds-dataset",
+    "title": "Sheep Breeds Dataset | Kaggle",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/amiteshpatra07/cattle-dataset-pig-sheep-cow-horse",
+    "title": "Cattle Dataset (Pig , Sheep ,Cow , Horse) | Kaggle",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/anandkumarsahu09/cattle-breeds-dataset",
+    "title": "Cattle Breeds Dataset | Kaggle",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/atharvadarpude/indian-cattle-image-dataset",
+    "title": "Indian Cattle Image Dataset | Kaggle",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/divyansh22/sheep-breed-classification",
+    "title": "Sheep Breed Classification | Kaggle",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/doctrinek/catbreedsrefined-7k",
+    "title": "CatBreedsRefined-7k | Kaggle",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/galibusm/galliformespectra-a-hen-breed-dataset",
+    "title": "GalliformeSpectra: A hen breed dataset | Kaggle",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/ifeanyinneji/donkeys-horses-zebra-images-dataset",
+    "title": "Donkeys, Horses &amp; Zebra Images Dataset | Kaggle",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/ma7555/cat-breeds-dataset",
+    "title": "Cat Breeds Dataset | Kaggle",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/olgabelitskaya/horse-breeds",
+    "title": "Horse Breeds | Kaggle",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/zaidworks0508/cow-breed-classification-dataset",
+    "title": "Cow Breed Classification Dataset | Kaggle",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/zimange/pig-dataset",
+    "title": "Pig dataset | Kaggle",
+    "status": "ok",
+    "error": ""
+  },
+  {
+    "url": "https://www.robots.ox.ac.uk/~vgg/data/pets/",
+    "title": "Visual Geometry Group - University of Oxford",
+    "status": "ok",
+    "error": ""
+  }
+]

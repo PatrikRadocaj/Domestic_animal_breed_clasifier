@@ -1,0 +1,4 @@
+﻿name: local_gpu
+notes: "Local GPU training profile."
+run_group: local_gpu
+save_code: true

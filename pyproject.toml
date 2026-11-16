@@ -34,18 +34,33 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
   "ipykernel>=6.29.0",
+  "mypy>=1.11.0",
   "pytest>=8.2.0",
   "ruff>=0.5.0",
 ]
 
 [project.scripts]
 animal-build-manifest = "animal_breed.data.manifests:main"
+animal-validate-label-mapping = "animal_breed.data.label_mapping_validate:main"
 animal-validate-manifest = "animal_breed.data.manifest_schema:main"
 animal-audit-dataset = "animal_breed.analysis.audit:main"
+animal-source-provenance-report = "animal_breed.analysis.source_provenance:main"
+animal-data-qa = "animal_breed.data.quality.gate:main"
+animal-eval = "animal_breed.evaluation.runner:main"
+animal-export-models = "animal_breed.export.models:main"
+animal-gpu-probe = "animal_breed.runtime.amd_gpu_probe:main"
+animal-mine-hard-negatives = "animal_breed.evaluation.hard_negatives:main"
 animal-split-manifest = "animal_breed.data.splitting:main"
 animal-prepare-yolo = "animal_breed.detection.yolo_dataset:main"
 animal-train-detector = "animal_breed.detection.train_yolo:main"
+animal-train-species-aware = "animal_breed.detection.species_aware_training:main"
 animal-train-classifier = "animal_breed.classification.train_classifier:main"
+animal-train-hierarchical-classifier = "animal_breed.classification.train_hierarchical:main"
+animal-train-yolo-curriculum = "animal_breed.detection.train_yolo_curriculum:main"
+animal-infer-two-stage = "animal_breed.pipelines.infer_two_stage:main"
+animal-mine-unlabeled-animals = "animal_breed.mining.unlabeled_animals:main"
+animal-review-boxes = "animal_breed.review.box_review_app:main"
+animal-datasource-sync-notify = "animal_breed.sync.notify_command:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -55,4 +70,12 @@ line-length = 100
 target-version = "py311"
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP", "B", "SIM"]
+select = ["E", "F", "B"]
+ignore = ["E501", "B905"]
+
+[tool.ruff.lint.per-file-ignores]
+"tools/*.py" = ["E402"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true

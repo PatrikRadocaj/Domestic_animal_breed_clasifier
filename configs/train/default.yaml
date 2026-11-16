@@ -4,6 +4,16 @@ device: auto
 precision: amp
 resume: false
 checkpoint_dir: experiments/checkpoints
+early_stopping_patience: 8
+grad_accum_steps: 1
+ema: false
+ema_decay: 0.9998
+
+loader:
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 2
+  drop_last: false
 
 tracking:
   backend: wandb

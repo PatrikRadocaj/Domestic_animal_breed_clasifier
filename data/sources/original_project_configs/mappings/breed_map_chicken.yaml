@@ -1,0 +1,28 @@
+# Add dataset-specific synonym mappings here as needed.
+# keys and values should be canonical snake_case labels.
+australorp: australorp
+bielefelder: bielefelder
+black_star_chicken: black_star_chicken
+blackorpington: blackorpington
+blue_plymouthrock: blue_plymouthrock
+brahma: brahma
+buckeye: buckeye
+chicken: unknown
+fayoumi: fayoumi
+golden_comet: golden_comet
+leghorn: leghorn
+lohmann: lohmann
+newhampshire: new_hampshire
+plymouthrock: plymouth_rock
+rir: rir
+sussex: sussex
+turken: turken
+wyandotte: wyandotte
+
+# Wikimedia cleanup aliases
+buff_oprington: orpington
+minorka: minorca
+brahma_bantam: brahma
+silkie_bantam: silkie
+modern_game_bantam: modern_game
+padovana_bantam: padovana

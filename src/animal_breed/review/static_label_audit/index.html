@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YOLO Label Audit</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="left-panel">
+        <div class="panel-header">
+          <h1>Label Audit</h1>
+          <p id="summaryText"></p>
+        </div>
+        <div class="filters">
+          <label>
+            Status
+            <select id="statusFilter">
+              <option value="all">All</option>
+              <option value="unreviewed">Unreviewed</option>
+              <option value="reviewed">Reviewed</option>
+            </select>
+          </label>
+          <label>
+            Search
+            <input id="searchInput" type="text" placeholder="dataset, label, notes" />
+          </label>
+        </div>
+        <div id="groupList" class="record-list"></div>
+      </aside>
+
+      <main class="main-panel">
+        <div class="toolbar">
+          <button id="prevBtn" type="button">Prev</button>
+          <button id="nextBtn" type="button">Next</button>
+        </div>
+        <div class="viewer-scroll">
+          <section class="sheet-panel">
+            <h2>Contact Sheet</h2>
+            <img id="sheetImage" alt="Contact sheet" />
+          </section>
+          <section class="samples-panel">
+            <h2>Sample Crops</h2>
+            <div id="sampleGrid" class="sample-grid"></div>
+          </section>
+        </div>
+      </main>
+
+      <aside class="right-panel">
+        <div class="panel-header">
+          <h2>Decision</h2>
+        </div>
+        <div id="metaBlock" class="meta-block"></div>
+        <form id="reviewForm" class="review-form">
+          <label>
+            Review Status
+            <select id="reviewStatus">
+              <option value="unreviewed">Unreviewed</option>
+              <option value="reviewed">Reviewed</option>
+            </select>
+          </label>
+          <label>
+            Decision
+            <select id="reviewDecision">
+              <option value="">Unset</option>
+              <option value="keep">Keep</option>
+              <option value="remove">Remove</option>
+              <option value="remap">Remap</option>
+              <option value="unclear">Unclear</option>
+            </select>
+          </label>
+          <label>
+            Proposed Species
+            <input id="proposedSpecies" type="text" placeholder="cat, dog, pig..." />
+          </label>
+          <label>
+            Notes
+            <textarea id="reviewNotes" rows="7" placeholder="What do these crops actually contain?"></textarea>
+          </label>
+          <button id="saveBtn" type="submit">Save Review</button>
+          <p id="saveStatus" class="save-status"></p>
+        </form>
+      </aside>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+  </html>

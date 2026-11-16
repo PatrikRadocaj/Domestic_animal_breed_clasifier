@@ -1,0 +1,73 @@
+Used dataset sources (from unified_manifest.csv)
+
+Known sources:
+- alpaca-wikimedia: https://commons.wikimedia.org
+- bactrian-camel-wikimedia: https://commons.wikimedia.org
+- bangladeshi-cow-breeds-yd84s35d73: https://data.mendeley.com/datasets/yd84s35d73/1
+- buffalo-breeds-vdgnxsm692: https://data.mendeley.com/datasets/vdgnxsm692/2
+- cat-breeds-ma7555: https://www.kaggle.com/datasets/ma7555/cat-breeds-dataset
+- catbreedsrefined-7k-doctrinek: https://www.kaggle.com/datasets/doctrinek/catbreedsrefined-7k
+- cats-dogs-ng6tv57j5c: https://data.mendeley.com/datasets/ng6tv57j5c/2
+- cattle-breeds-anandkumarsahu09: https://www.kaggle.com/datasets/anandkumarsahu09/cattle-breeds-dataset
+- cattle-breeds-wikimedia: https://commons.wikimedia.org
+- cattle-pig-sheep-cow-horse-amiteshpatra07: https://www.kaggle.com/datasets/amiteshpatra07/cattle-dataset-pig-sheep-cow-horse
+- cattle-side-back-h2s22wr5py: https://data.mendeley.com/datasets/h2s22wr5py/2
+- chicken-breeds-nk3zbvd5h8: https://data.mendeley.com/datasets/nk3zbvd5h8/1
+- chicken-breeds-wikimedia: https://commons.wikimedia.org
+- cow-breed-classification-zaidworks0508: https://www.kaggle.com/datasets/zaidworks0508/cow-breed-classification-dataset
+- donkey-breeds-wikimedia: https://commons.wikimedia.org
+- dromedary-wikimedia: https://commons.wikimedia.org
+- duck-breeds-wikimedia: https://commons.wikimedia.org
+- farm-animals-v1i-yolo26-roboflow: https://universe.roboflow.com/cmpe-249/farm-animals-yrpj3
+- galliformespectra-galibusm: https://www.kaggle.com/datasets/galibusm/galliformespectra-a-hen-breed-dataset
+- goat-breeds-wikimedia: https://commons.wikimedia.org
+- goose-breeds-wikimedia: https://commons.wikimedia.org
+- horse-breeds-olgabelitskaya: https://www.kaggle.com/datasets/olgabelitskaya/horse-breeds
+- horse-breeds-wikimedia: https://commons.wikimedia.org
+- indian-cattle-image-atharvadarpude: https://www.kaggle.com/datasets/atharvadarpude/indian-cattle-image-dataset
+- llama-wikimedia: https://commons.wikimedia.org
+- oxford-iiit-pet-vgg: https://www.robots.ox.ac.uk/~vgg/data/pets/
+- peafowl-wikimedia: https://commons.wikimedia.org
+- pig-breed-identification-v3: https://universe.roboflow.com/kalyani-government-engineering-college/pig-breed-identification
+- pig-breed-identification-v5-pleseeeeee: https://universe.roboflow.com/wowwww/pig-breed-identification-1wnjh
+- pig-breeds-wikimedia: https://commons.wikimedia.org
+- pig-dataset-zimange: https://www.kaggle.com/datasets/zimange/pig-dataset
+- pig-detection-kaimq-a8ret-abpd: https://universe.roboflow.com/rf100-vl/pig-detection-kaimq-a8ret-abpd
+- pigeon-breeds-wikimedia: https://commons.wikimedia.org
+- pure-chicken-breeds-identification-roboflow: https://universe.roboflow.com/sliit-aecgu/pure-chicken-breeds-identification
+- rabbit-breed-classification-roboflow: https://universe.roboflow.com/rabbit-management/rabbit-breed-classification
+- rabbit-breeds-wikimedia: https://commons.wikimedia.org
+- recbov51c-8ysxtyf8p2: https://data.mendeley.com/datasets/8ysxtyf8p2/1
+- sheep-breed-classification-divyansh22: https://www.kaggle.com/datasets/divyansh22/sheep-breed-classification
+- sheep-breeds-4skwhnrscr: https://data.mendeley.com/datasets/4skwhnrscr/2
+- sheep-breeds-4ytic-roboflow: https://universe.roboflow.com/biomedical-engineering-mansoura-university/sheep-breeds-4ytic
+- sheep-breeds-alaayusufsiyamek: https://www.kaggle.com/datasets/alaayusufsiyamek/sheep-breeds-dataset
+- sheep-breeds-wikimedia: https://commons.wikimedia.org
+- sheepbreed-64gkbz8bdb: https://data.mendeley.com/datasets/64gkbz8bdb/2
+- stanford-dogs-imagenetdogs: http://vision.stanford.edu/aditya86/ImageNetDogs/
+- turkey-breeds-wikimedia: https://commons.wikimedia.org
+- water-buffalo-wikimedia: https://commons.wikimedia.org
+
+Unknown sources:
+- [none]
+
+Added raw sources (not integrated yet):
+- alpaca-4lxyr-roboflow-v41: https://universe.roboflow.com/macariola/alpaca-4lxyr/dataset/41 (raw_only_not_integrated; verified alpaca-only labels via Roboflow metadata; not integrated yet)
+- alpaca-xqfiw-roboflow-v2: https://universe.roboflow.com/alpaca-uljo6/alpaca-xqfiw/dataset/2 (raw_only_not_integrated; verified alpaca-only labels on dataset page; not integrated yet)
+- arabian-camel-classification2-roboflow-v1: https://universe.roboflow.com/object-detection-workspace-l4onq/arabian-camel-classification2/dataset/1 (raw_only_not_integrated; verified dromedary-only class scope; color-label mapping prepared; not integrated yet)
+- camel-classification-roboflow-v1: https://universe.roboflow.com/project-ztqj0/camel-classification/dataset/1 (raw_only_not_integrated; dromedary_only; subspecies-labeled; compare overlap before integrate)
+- camel-classification-roboflow-v2: https://universe.roboflow.com/project-ztqj0/camel-classification/dataset/2 (raw_only_not_integrated; dromedary_only; subspecies-labeled; compare overlap before integrate)
+- camel-classification-roboflow-v3: https://universe.roboflow.com/project-ztqj0/camel-classification/dataset/3 (raw_only_not_integrated; dromedary_only; subspecies-labeled; compare overlap before integrate)
+- llamas-2tdzp-roboflow-v1: https://universe.roboflow.com/ts-my9bt/llamas-2tdzp/dataset/1 (raw_only_not_integrated; verified llama-only labels on dataset page samples; not integrated yet)
+- llamas-anvhx-roboflow-v1: https://universe.roboflow.com/jetcounterdemo/llamas-anvhx/dataset/1 (raw_only_not_integrated; verified llama-only labels on dataset page samples; not integrated yet)
+- llamas-hardee-roboflow-v1: https://universe.roboflow.com/hardee/llamas/dataset/1 (raw_only_not_integrated; verified llama-only labels on dataset page samples; not integrated yet)
+- donkey-auto-dataset-roboflow-v4: https://universe.roboflow.com/shukurullo-meliboev/donkey-auto-dataset/dataset/4 (raw_only_not_integrated; species_only_not_breed_defined)
+- donkey-auto-dataset-roboflow-v5: https://universe.roboflow.com/shukurullo-meliboev/donkey-auto-dataset/dataset/5 (raw_only_not_integrated; species_only_not_breed_defined)
+- donkey-bdn3l-roboflow-v1: https://universe.roboflow.com/test-rznll/donkey-bdn3l/dataset/1/images (raw_only_not_integrated; species_only_not_breed_defined)
+- donkeys-horses-zebra-ifeanyinneji: https://www.kaggle.com/datasets/ifeanyinneji/donkeys-horses-zebra-images-dataset (raw_only_not_integrated; de-integrated from manifest by user request; species-only (horse/donkey))
+- turkey-breeds-feathersite: https://www.feathersite.com (raw_only_not_integrated; scraped from c:/Users/User/Downloads/feathersite_turkey_breed_links.txt with merge map c:/Users/User/Downloads/turkey_breed_rename_map.yml)
+- turkey-v1i-yolo26-roboflow: https://universe.roboflow.com/kronee-chan/turkey-ei1zv/dataset/1 (raw_only_not_integrated; local zip source: c:/Users/User/Downloads/turkey.v1i.yolo26.zip)
+- geese-counting-project-2-fipqg-roboflow-v4: https://universe.roboflow.com/data-mining-2qphn/geese-counting-project-2-fipqg/dataset/4 (raw_only_not_integrated; local zip source import; not integrated yet)
+- inaturalist-bactrian-camel-manual: https://inaturalist-open-data.s3.amazonaws.com/ (raw_only_not_integrated; 12 direct image URLs user-provided for bactrian camel; saved to data/raw/inaturalist-bactrian-camel)
+- inaturalist-camelus-ferus-cc0: https://www.inaturalist.org/taxa/74138-Camelus-ferus/browse_photos?quality_grade=any&photo_license=cc0 (raw_only_not_integrated; downloaded via iNaturalist observations API with taxon_id=74138; not integrated yet)
+- inaturalist-camelus-bactrianus-cc-by: https://www.inaturalist.org/taxa/524409-Camelus-bactrianus/browse_photos?quality_grade=any&photo_license=cc-by&term_id=22&term_value_id=24 (raw_only_not_integrated; CC-BY attribution required; attribution file: data/raw/inaturalist-bactrian-camel/_attribution_camelus_bactrianus_cc_by.csv; not integrated yet)

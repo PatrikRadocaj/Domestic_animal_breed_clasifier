@@ -1,0 +1,11 @@
+# Add dataset-specific synonym mappings here as needed.
+# keys and values should be canonical snake_case labels.
+californian: californian
+holland_lop: holland_lop
+lionhead: lionhead
+new_zealand: new_zealand
+
+# Wikimedia cleanup aliases
+unknown: unknown
+unidentified_rabbit_breed: unknown
+miniature_lop: mini_lop
