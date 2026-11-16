@@ -1,0 +1,2 @@
+models/final/**/*.pt filter=lfs diff=lfs merge=lfs -text
+archive/training/**/*.gz filter=lfs diff=lfs merge=lfs -text

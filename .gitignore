@@ -32,3 +32,6 @@ venv/
 *.log
 .env.*
 !.env.example
+
+# Published final checkpoints (stored through Git LFS).
+!models/final/**/*.pt
